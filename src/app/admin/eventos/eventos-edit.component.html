@@ -1,0 +1,510 @@
+<div class="row p-l-20 p-r-20">
+  <div class="col p-t-20 loading-{{ flagLoadingData }}">
+
+    <div class="loading text-center">
+
+      <fa-icon
+        [icon]="['fas', 'spinner']"
+        [spin]="true"
+        style="font-size: 2em;">
+      </fa-icon>
+
+    </div>
+
+    <div *ngIf="!flagLoadingData" class="row loaded-content">
+      <div class="col p-t-20">
+
+        <form (submit)="sendForm()" [formGroup]="cadastroForm">
+
+          <div class="form-group row">
+            <label class="col-4 col-form-label text-right p-r-10" for="txtEventName">
+              Evento:
+            </label>
+            <div class="col-6">
+              <input
+                class="form-control"
+                formControlName="eventName"
+                id="txtEventName"
+                type="text"
+              />
+            </div>
+          </div>
+          <div class="form-group row" style="margin-top: -15px">
+            <div class="col-sm-6 offset-4">
+              <div
+                *ngIf="eventName.invalid && (eventName.dirty || eventName.touched)"
+                class="alert alert-danger txt-xsm"
+                style="margin-bottom: 0px"
+              >
+                <div *ngIf="eventName.errors.required">
+                  Campo obrigatório.
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!--
+              <div class="form-group row">
+                 <label class="col-4 col-form-label text-right p-r-10">
+                        Opções de Auto-cadastro:
+                 </label>
+                 <div class="col-6">
+                   <p-multiSelect
+                          [(ngModel)]="flagAllowSelfSubscription"
+                          [ngModelOptions]="{ standalone: true }"
+                          [options]="selfSubscriptionOptions"
+                          optionLabel="option"
+                        >
+                        </p-multiSelect>
+                      </div>
+                    </div>
+-->
+          <div class="form-group row">
+            <label
+              class="col-sm-4 col-form-label text-right"
+              for="txtEventDescription"
+            >
+              Descrição:
+            </label>
+            <div class="col-sm-6">
+                        <textarea
+                          class="form-control"
+                          formControlName="eventDescription"
+                          id="txtEventDescription"
+                          rows="2"
+                          style="resize: none"
+                          type="text"
+                        ></textarea>
+            </div>
+          </div>
+
+          <div class="form-group row" style="margin-top: -15px">
+            <div class="col-sm-6 offset-4">
+              <div
+                *ngIf="eventDescription.invalid && (eventDescription.dirty || eventDescription.touched)"
+                class="alert alert-danger txt-xsm" style="margin-bottom: 0px">
+                <div
+                  *ngIf="eventDescription.errors.required">
+                  Campo obrigatório.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group row form-input-width">
+            <label
+              class="col-4 col-form-label text-right"
+              for="txtStartDate"
+            >
+              Início:
+            </label>
+            <div class="col-6">
+              <p-calendar
+                formControlName="startDate"
+                id="txtStartDate"
+                showTime="true" hourFormat="24"></p-calendar>
+            </div>
+
+          </div>
+
+          <div class="form-group row form-input-width">
+            <label
+              class="col-4 col-form-label text-right"
+              for="txtEndDate"
+            >
+              Fim:
+            </label>
+            <div class="col-6">
+              <p-calendar
+                formControlName="endDate"
+                id="txtEndDate"
+                showTime="true" hourFormat="24"></p-calendar>
+            </div>
+          </div>
+
+          <br>
+          <br>
+
+          <div class="form-group row">
+            <div class="col-10 offset-1">
+
+              <p-tabView>
+                <p-tabPanel header="Customização">
+
+                  <div class="form-group row">
+                    <label class="col-2 col-form-label text-right p-r-10" for="txtLogoImgUrl">
+                      <h5>Logo</h5>
+                    </label>
+                    <div class="col-10">
+                      <input
+                        class="form-control"
+                        formControlName="logoImgUrl"
+                        id="txtLogoImgUrl"
+                        placeholder="https://link-da-imagem.com/..."
+                        type="text"
+                      />
+                    </div>
+                  </div>
+
+                  <br>
+
+                  <div class="form-group row">
+                    <div class="col-2 text-right p-r-10">
+                      <h5>Home</h5>
+                    </div>
+                    <div class="col-3 d-flex flex-column">
+                      <label for="txtHomeColor">Cor Texto:</label>
+                      <input
+                        [(colorPicker)]="homeColor.value"
+                        [cpOKButtonClass]="'btn btn-primary btn-xs'"
+                        [cpOKButton]="true"
+                        [cpSaveClickOutside]="true"
+                        [style.background]="homeColor.value"
+                        [value]="homeColor.value"
+                        class="form-control"
+                        formControlName="homeColor"
+                        id="txtHomeColor"
+                      />
+                    </div>
+
+                    <div class="col-3 d-flex flex-column">
+                      <label for="txtHomeBgColor">Cor Fundo:</label>
+                      <input
+                        [(colorPicker)]="homeBgColor.value"
+                        [cpOKButtonClass]="'btn btn-primary btn-xs'"
+                        [cpOKButton]="true"
+                        [cpSaveClickOutside]="true"
+                        [style.background]="homeBgColor.value"
+                        [value]="homeBgColor.value"
+                        class="form-control"
+                        formControlName="homeBgColor"
+                        id="txtHomeBgColor"/>
+                    </div>
+
+                    <div class="col-4 d-flex flex-column">
+                      <label for="txtHomeImgUrl">
+                        URL Imagem:
+                      </label>
+                      <input
+                        class="form-control"
+                        formControlName="homeBgImgUrl"
+                        id="txtHomeImgUrl"
+                        placeholder="https://link.com/..."
+                        type="text"
+                      />
+                    </div>
+                  </div>
+
+                  <br>
+
+                  <div class="form-group row">
+                    <div class="col-2 text-right p-r-10">
+                      <h5>Login</h5>
+                    </div>
+
+                    <div class="col-3 d-flex flex-column">
+                      <label for="txtLoginColor">
+                        Cor Texto:
+                      </label>
+                      <input
+                        [(colorPicker)]="loginColor.value"
+                        [cpOKButtonClass]="'btn btn-primary btn-xs'"
+                        [cpOKButton]="true"
+                        [cpSaveClickOutside]="true"
+                        [style.background]="loginColor.value"
+                        [value]="loginColor.value"
+                        class="form-control"
+                        formControlName="loginColor"
+                        id="txtLoginColor"
+                      />
+                    </div>
+
+                    <div class="col-3 d-flex flex-column">
+                      <label for="txtLoginBgColor">
+                        Cor Fundo:
+                      </label>
+                      <input
+                        [(colorPicker)]="loginBgColor.value"
+                        [cpOKButtonClass]="'btn btn-primary btn-xs'"
+                        [cpOKButton]="true"
+                        [cpSaveClickOutside]="true"
+                        [style.background]="loginBgColor.value"
+                        [value]="loginBgColor.value"
+                        class="form-control"
+                        formControlName="loginBgColor"
+                        id="txtLoginBgColor"/>
+                    </div>
+
+                    <div class="col-4 d-flex flex-column">
+                      <label for="txtLoginImgUrl">
+                        URL Imagem:
+                      </label>
+                      <input
+                        class="form-control"
+                        formControlName="loginImgUrl"
+                        id="txtLoginImgUrl"
+                        placeholder="https://link.com/..."
+                        type="text"
+                      />
+                    </div>
+                  </div>
+
+                  <br>
+
+                  <div class="form-group row">
+                    <div class="col-2 text-right p-r-10">
+                      <h5>Cadastro</h5>
+                    </div>
+
+                    <div class="col-3 d-flex flex-column">
+                      <label for="txtSignUpColor">
+                        Cor Texto:
+                      </label>
+                      <input
+                        [(colorPicker)]="signUpColor.value"
+                        [cpOKButtonClass]="'btn btn-primary btn-xs'"
+                        [cpOKButton]="true"
+                        [cpSaveClickOutside]="true"
+                        [style.background]="signUpColor.value"
+                        [value]="signUpColor.value"
+                        class="form-control"
+                        formControlName="homeColor"
+                        id="txtSignUpColor"
+                      />
+                    </div>
+
+                    <div class="col-3 d-flex flex-column">
+                      <label for="txtSignUpBgColor">
+                        Cor Fundo:
+                      </label>
+                      <input
+                        [(colorPicker)]="signUpBgColor.value"
+                        [cpOKButtonClass]="'btn btn-primary btn-xs'"
+                        [cpOKButton]="true"
+                        [cpSaveClickOutside]="true"
+                        [style.background]="signUpBgColor.value"
+                        [value]="signUpBgColor.value"
+                        class="form-control"
+                        formControlName="homeBgColor"
+                        id="txtSignUpBgColor"/>
+                    </div>
+
+                    <div class="col-4 d-flex flex-column">
+                      <label for="txtSignUpImgUrl">
+                        URL Imagem:
+                      </label>
+                      <input
+                        class="form-control"
+                        formControlName="signUpImgUrl"
+                        id="txtSignUpImgUrl"
+                        placeholder="https://link.com/..."
+                        type="text"
+                      />
+                    </div>
+                  </div>
+                </p-tabPanel>
+
+                <p-tabPanel header="Streams">
+                  <button
+                    (click)="addStream()"
+                    class="btn btn-primary btn-sm m-b-20"
+                    type="button">
+                    Adicionar Stream
+                  </button>
+                  <section
+                    *ngFor="let stream of streamControls; let i = index;"
+                    formArrayName="streams"
+                  >
+                    <div [formGroupName]="i">
+                      <div class="row">
+                        <div class="col-6">
+                          <h4>Stream {{ i + 1 }}</h4>
+                        </div>
+                        <div class="col-6 text-right">
+                          <button
+                            (click)="removeStream(i)"
+                            class="btn btn-danger btn-sm"
+                            type="button">
+                            Remover
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label class="col-4 col-form-label text-right p-r-10" for="txtStreamName">
+                          Nome da Sessão:
+                        </label>
+                        <div class="col-6">
+                          <input
+                            class="form-control"
+                            formControlName="streamName"
+                            id="txtStreamName"
+                            type="text"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label class="col-4 col-form-label text-right p-r-10" for="txtStreamVimeoUrl">
+                          URL Vimeo:
+                        </label>
+                        <div class="col-6">
+                          <input
+                            class="form-control"
+                            formControlName="streamVimeoUrl"
+                            id="txtStreamVimeoUrl"
+                            placeholder="https://vimeo.com/..."
+                            type="text"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <div class="col-4 text-right p-r-10">
+                          Termos:
+                        </div>
+                        <div class="col-8">
+                          <div class="form-check">
+                            <input
+                              [(ngModel)]="streamControls[i].value.requiresAgreement"
+                              class="form-check-input"
+                              [checked]="streamControls[i].value.requiresAgreement == 'true' || true "
+                              formControlName="requiresAgreement"
+                              id="txtRequiresAgreement"
+                              name="txtRequiresAgreement"
+                              type="checkbox"
+                            >
+                            <label class="form-check-label" for="txtRequiresAgreement">
+                              Sim!
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div *ngIf="streamControls[i].value.requiresAgreement">
+                        <div class="form-group row">
+                          <label class="col-4 col-form-label text-right p-r-10" for="txtAgreementUrl">
+                            URL Termos:
+                          </label>
+                          <div class="col-6">
+                            <input
+                              class="form-control"
+                              formControlName="agreementUrl"
+                              id="txtAgreementUrl"
+                              placeholder="https://seutermo.com/..."
+                              type="text"
+                            />
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <label class="col-4 col-form-label text-right p-r-10" for="txtSocialMediaUrl">
+                          URL Midias sociais:
+                        </label>
+                        <div class="col-6">
+                          <input
+                            class="form-control"
+                            formControlName="socialMediaUrl"
+                            id="txtSocialMediaUrl"
+                            placeholder="https://mídiasocial.com/..."
+                            type="text"
+                          />
+                        </div>
+                      </div>
+
+                      <div class="form-group row">
+                        <div class="col text-center align-items-center justify-content-center">
+                          <h6>Horários</h6>
+                        </div>
+
+                        <div class="form-group row">
+                          <label class="col-4 col-form-label text-right p-r-10" for="txtEnabledFromDate">
+                            Disponível para visualização:
+                          </label>
+                          <div class="col-6 m-b-20">
+                            <p-calendar
+                              formControlName="enabledFromDate"
+                              id="txtEnabledFromDate"
+                              showTime="true" hourFormat="24"></p-calendar>
+                          </div>
+
+                          <br>
+
+                          <label class="col-4 col-form-label text-right p-r-10" for="txtRunningFromDate">
+                            Início da transmissão:
+                          </label>
+                          <div class="col-6 m-b-20">
+                            <p-calendar
+                              formControlName="runningFromDate"
+                              id="txtRunningFromDate"
+                              showTime="true" hourFormat="24"></p-calendar>
+                          </div>
+
+                          <br>
+
+                          <label class="col-4 col-form-label text-right p-r-10" for="txtRunningToDate">
+                            Fim da transmissão:
+                          </label>
+                          <div class="col-6">
+                            <p-calendar
+                              formControlName="runningToDate"
+                              id="txtRunningToDate"
+                              showTime="true" hourFormat="24"></p-calendar>
+                          </div>
+                        </div>
+
+
+                      </div>
+                    </div>
+                  </section>
+                </p-tabPanel>
+              </p-tabView>
+
+            </div>
+
+          </div>
+
+          <br>
+
+          <div
+            class="form-group row"
+            style="margin-top: 50px !important; padding-bottom: 40px;"
+          >
+            <div class="col-6 offset-md-4">
+              <button class="btn btn-primary m-r-5" style="min-width: 7em" type="submit">
+                <fa-icon
+                  *ngIf="!flagSavingData"
+                  [icon]="['fas', 'save']"
+                ></fa-icon>
+                <fa-icon
+                  *ngIf="flagSavingData"
+                  [icon]="['fas', 'spinner']"
+                  [spin]="true"
+                ></fa-icon>
+                <span *ngIf="!flagSavingData"> Salvar </span>
+              </button>
+
+              <button class="btn btn-danger" routerLink="/admin/eventos" style="min-width: 7em">
+                <fa-icon
+                  *ngIf="!flagSavingData"
+                  [icon]="['fas', 'ban']"
+                ></fa-icon>
+                <fa-icon
+                  *ngIf="flagSavingData"
+                  [icon]="['fas', 'ban']"
+                  disabled
+                ></fa-icon>
+                <span *ngIf="!flagSavingData"> Cancelar </span>
+              </button>
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</div>

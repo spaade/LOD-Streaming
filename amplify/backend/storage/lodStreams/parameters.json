@@ -1,0 +1,7 @@
+{
+    "tableName": "lodStreams",
+    "partitionKeyName": "eventId",
+    "partitionKeyType": "S",
+    "sortKeyName": "id",
+    "sortKeyType": "N"
+}

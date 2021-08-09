@@ -1,0 +1,140 @@
+{
+    "resource": "/companyUsers/{proxy+}",
+    "path": "/companyUsers/byEmail/lod@lod.com.vc",
+    "httpMethod": "GET",
+    "headers": {
+        "Accept": "*/*",
+        "Accept-Encoding": "gzip, deflate, br",
+        "Authorization": "Bearer eyJraWQiOiJQb2ZpVUo1XC9DdWZkemdqblpwZHlcLzNZbktDaW5FMjBoUlprdEpac3lkS2c9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI2NjBhYzk1ZS05MjM3LTRmNGUtYWY3ZC1mYjU0MzlhMjQ3ZjgiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJvZmlsZSI6ImJlY2ttYW4xIiwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfRm9EMm8wcm96IiwiY29nbml0bzp1c2VybmFtZSI6ImxvZCIsImF1ZCI6IjV2OXFyNG1lamNkZmg1Ym9wa3BmODNobGdnIiwiZXZlbnRfaWQiOiJmOWFkYThjYS05MDAwLTRjYjgtYmNjMS04M2MwMGIyZjM1NGEiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTYxNTU3NzA3MSwibmFtZSI6IkxPRCIsImV4cCI6MTYxNTU4MDY3MSwiaWF0IjoxNjE1NTc3MDcxLCJlbWFpbCI6ImxvZEBlbWFpbC5jb20ifQ.Ct6H4gPLpIJL_vLW5DRsGog5tESaFEMdJ8XaFfE-365AtOI_rgQKnH1pJYmSRQolIzTAzu4jKaoGYT2rIASBVA_2znxAqteQE11BHAsdvIRaemI5tAkeHokUJwpnSDFzN8ozPro9NTffOnvgYjrmiWUGBn7E-87BCjWU94LgkOT4nk2j_IlY0Fqu0buZU0LKtT04Q8y1AmJO8JNwCiHszhSKK-q7_M_5XRAXk_QMSqSLG4X1BIuBCn3Ul1-lkPZ8KmvENs84CSGxWWfbUS7VsV-jkHaKSDLmfiIWC9g_0ZLLU0YmnQiAKXgJwI7EQyuxB-QB4XK4n7iMpDt05Esxrg",
+        "Cache-Control": "no-cache",
+        "CloudFront-Forwarded-Proto": "https",
+        "CloudFront-Is-Desktop-Viewer": "true",
+        "CloudFront-Is-Mobile-Viewer": "false",
+        "CloudFront-Is-SmartTV-Viewer": "false",
+        "CloudFront-Is-Tablet-Viewer": "false",
+        "CloudFront-Viewer-Country": "BR",
+        "Host": "ia1g0qce97.execute-api.us-east-1.amazonaws.com",
+        "Postman-Token": "ce51d0d7-fbc0-433b-9abd-a62465e37fb8",
+        "User-Agent": "PostmanRuntime/7.26.10",
+        "Via": "1.1 597dd8a4102439ae7e56785152fb5b13.cloudfront.net (CloudFront)",
+        "X-Amz-Cf-Id": "KlV6xEdPZerK6N9gZun4ybZg30BXY2hPKKJX2BFGEnfn_gWMAYuwhg==",
+        "X-Amzn-Trace-Id": "Root=1-604bc5a8-1450d9ad34208a611c318c39",
+        "X-Forwarded-For": "179.209.140.251, 64.252.179.94",
+        "X-Forwarded-Port": "443",
+        "X-Forwarded-Proto": "https"
+    },
+    "multiValueHeaders": {
+        "Accept": [
+            "*/*"
+        ],
+        "Accept-Encoding": [
+            "gzip, deflate, br"
+        ],
+        "Authorization": [
+            "Bearer eyJraWQiOiJQb2ZpVUo1XC9DdWZkemdqblpwZHlcLzNZbktDaW5FMjBoUlprdEpac3lkS2c9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiI2NjBhYzk1ZS05MjM3LTRmNGUtYWY3ZC1mYjU0MzlhMjQ3ZjgiLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwicHJvZmlsZSI6ImJlY2ttYW4xIiwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfRm9EMm8wcm96IiwiY29nbml0bzp1c2VybmFtZSI6ImxvZCIsImF1ZCI6IjV2OXFyNG1lamNkZmg1Ym9wa3BmODNobGdnIiwiZXZlbnRfaWQiOiJmOWFkYThjYS05MDAwLTRjYjgtYmNjMS04M2MwMGIyZjM1NGEiLCJ0b2tlbl91c2UiOiJpZCIsImF1dGhfdGltZSI6MTYxNTU3NzA3MSwibmFtZSI6IkxPRCIsImV4cCI6MTYxNTU4MDY3MSwiaWF0IjoxNjE1NTc3MDcxLCJlbWFpbCI6ImxvZEBlbWFpbC5jb20ifQ.Ct6H4gPLpIJL_vLW5DRsGog5tESaFEMdJ8XaFfE-365AtOI_rgQKnH1pJYmSRQolIzTAzu4jKaoGYT2rIASBVA_2znxAqteQE11BHAsdvIRaemI5tAkeHokUJwpnSDFzN8ozPro9NTffOnvgYjrmiWUGBn7E-87BCjWU94LgkOT4nk2j_IlY0Fqu0buZU0LKtT04Q8y1AmJO8JNwCiHszhSKK-q7_M_5XRAXk_QMSqSLG4X1BIuBCn3Ul1-lkPZ8KmvENs84CSGxWWfbUS7VsV-jkHaKSDLmfiIWC9g_0ZLLU0YmnQiAKXgJwI7EQyuxB-QB4XK4n7iMpDt05Esxrg"
+        ],
+        "Cache-Control": [
+            "no-cache"
+        ],
+        "CloudFront-Forwarded-Proto": [
+            "https"
+        ],
+        "CloudFront-Is-Desktop-Viewer": [
+            "true"
+        ],
+        "CloudFront-Is-Mobile-Viewer": [
+            "false"
+        ],
+        "CloudFront-Is-SmartTV-Viewer": [
+            "false"
+        ],
+        "CloudFront-Is-Tablet-Viewer": [
+            "false"
+        ],
+        "CloudFront-Viewer-Country": [
+            "BR"
+        ],
+        "Host": [
+            "ia1g0qce97.execute-api.us-east-1.amazonaws.com"
+        ],
+        "Postman-Token": [
+            "ce51d0d7-fbc0-433b-9abd-a62465e37fb8"
+        ],
+        "User-Agent": [
+            "PostmanRuntime/7.26.10"
+        ],
+        "Via": [
+            "1.1 597dd8a4102439ae7e56785152fb5b13.cloudfront.net (CloudFront)"
+        ],
+        "X-Amz-Cf-Id": [
+            "KlV6xEdPZerK6N9gZun4ybZg30BXY2hPKKJX2BFGEnfn_gWMAYuwhg=="
+        ],
+        "X-Amzn-Trace-Id": [
+            "Root=1-604bc5a8-1450d9ad34208a611c318c39"
+        ],
+        "X-Forwarded-For": [
+            "179.209.140.251, 64.252.179.94"
+        ],
+        "X-Forwarded-Port": [
+            "443"
+        ],
+        "X-Forwarded-Proto": [
+            "https"
+        ]
+    },
+    "queryStringParameters": null,
+    "multiValueQueryStringParameters": null,
+    "pathParameters": {
+        "proxy": "byEmail/lod@lod.com.vc"
+    },
+    "stageVariables": null,
+    "requestContext": {
+        "resourceId": "l8x4ip",
+        "authorizer": {
+            "claims": {
+                "sub": "660ac95e-9237-4f4e-af7d-fb5439a247f8",
+                "email_verified": "true",
+                "profile": "beckman1",
+                "iss": "https://cognito-idp.us-east-1.amazonaws.com/us-east-1_FoD2o0roz",
+                "cognito:username": "lod",
+                "aud": "5v9qr4mejcdfh5bopkpf83hlgg",
+                "event_id": "f9ada8ca-9000-4cb8-bcc1-83c00b2f354a",
+                "token_use": "id",
+                "auth_time": "1615577071",
+                "name": "LOD",
+                "exp": "Fri Mar 12 20:24:31 UTC 2021",
+                "iat": "Fri Mar 12 19:24:31 UTC 2021",
+                "email": "lod@email.com"
+            }
+        },
+        "resourcePath": "/companyUsers/{proxy+}",
+        "httpMethod": "GET",
+        "extendedRequestId": "cFvSXHrVIAMF_Qg=",
+        "requestTime": "12/Mar/2021:19:48:56 +0000",
+        "path": "/main/companyUsers/byEmail/lod@lod.com.vc",
+        "accountId": "918638571272",
+        "protocol": "HTTP/1.1",
+        "stage": "main",
+        "domainPrefix": "ia1g0qce97",
+        "requestTimeEpoch": 1615578536673,
+        "requestId": "32eb75e8-ca08-4f53-a899-715182496c09",
+        "identity": {
+            "cognitoIdentityPoolId": null,
+            "accountId": null,
+            "cognitoIdentityId": null,
+            "caller": null,
+            "sourceIp": "179.209.140.251",
+            "principalOrgId": null,
+            "accessKey": null,
+            "cognitoAuthenticationType": null,
+            "cognitoAuthenticationProvider": null,
+            "userArn": null,
+            "userAgent": "PostmanRuntime/7.26.10",
+            "user": null
+        },
+        "domainName": "ia1g0qce97.execute-api.us-east-1.amazonaws.com",
+        "apiId": "ia1g0qce97"
+    },
+    "body": null,
+    "isBase64Encoded": false
+}

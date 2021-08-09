@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/events",
+            "lambdaFunction": "lodEventsApiFun",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/events"
+        }
+    ],
+    "resourceName": "lodEventsApi",
+    "apiName": "lodEventsApi",
+    "functionArns": [
+        {
+            "lambdaFunction": "lodEventsApiFun"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-lodio-main-100605-authRole",
+        "unAuthRoleName": "amplify-lodio-main-100605-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "lodEventsApiFun",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

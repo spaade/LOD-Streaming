@@ -1,0 +1,7 @@
+{
+    "tableName": "lodCompanyUsers",
+    "partitionKeyName": "companyId",
+    "partitionKeyType": "S",
+    "sortKeyName": "userId",
+    "sortKeyType": "S"
+}

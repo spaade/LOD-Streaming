@@ -1,0 +1,136 @@
+<div class="row p-l-20 p-r-20">
+  <div class="col p-t-20 loading-{{ flagLoadingData }}">
+
+    <div class="loading text-center">
+
+      <fa-icon
+        [icon]="['fas', 'spinner']"
+        [spin]="true"
+        style="font-size: 2em;">
+      </fa-icon>
+
+    </div>
+
+    <div class="row loaded-content" *ngIf="!flagLoadingData">
+      <div class="col p-t-20">
+
+        <form (submit)="sendForm()" [formGroup]="cadastroForm">
+
+          <div class="form-group row">
+            <label for="txtCompanyName" class="col-4 col-form-label text-right p-r-10">
+              Nome do Cliente:
+            </label>
+            <div class="col-6">
+              <input
+                type="text"
+                class="form-control"
+                id="txtCompanyName"
+                name="txtCompanyName"
+                formControlName="companyName"
+              >
+            </div>
+          </div>
+          <div class="form-group row" style="margin-top: -15px">
+            <div class="col-sm-6 offset-4">
+
+              <div
+                *ngIf="companyName.invalid && (companyName.dirty || companyName.touched)"
+                class="alert alert-danger txt-xsm"
+                style="margin-bottom: 0"
+              >
+                <div *ngIf="companyName.errors.required">
+                  Campo obrigatório.
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label
+              for="txtCompanyName"
+              class="col-4 col-form-label text-right p-r-10"
+            >
+              Subdomínios:
+            </label>
+            <div class="col-6">
+              <input
+                type="text"
+                class="form-control"
+                id="txtSubdomains"
+                name="txtSubdomains"
+                formControlName="subdomains"
+              >
+            </div>
+          </div>
+          <div class="form-group row" style="margin-top: -15px">
+            <div class="col-sm-6 offset-4">
+
+              <div
+                *ngIf="subdomains.invalid && (subdomains.dirty || subdomains.touched)"
+                class="alert alert-danger txt-xsm"
+                style="margin-bottom: 0"
+              >
+                <div *ngIf="subdomains.errors.required">
+                  Campo obrigatório.
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-4 text-right p-r-10">
+              Ativa:
+            </div>
+            <div class="col-8">
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="gridCheck1"
+                  name="gridCheck1"
+                  formControlName="companyStatus"
+                >
+                <label class="form-check-label" for="gridCheck1">
+                  Empresa ativa
+                </label>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-6 offset-md-4">
+              <button class="btn btn-primary m-r-5" style="min-width: 7em" type="submit">
+                <fa-icon
+                  *ngIf="!flagSavingData"
+                  [icon]="['fas', 'save']"
+                ></fa-icon>
+                <fa-icon
+                  *ngIf="flagSavingData"
+                  [icon]="['fas', 'spinner']"
+                  [spin]="true"
+                ></fa-icon>
+                <span *ngIf="!flagSavingData"> Salvar </span>
+              </button>
+
+              <button
+                class="btn btn-danger"
+                style="min-width: 7em"
+                routerLink="/admin/clientes"
+                [disabled]="flagSavingData"
+              >
+                <span>
+                  Cancelar
+                </span>
+              </button>
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</div>

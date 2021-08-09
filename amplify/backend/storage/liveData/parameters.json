@@ -1,0 +1,7 @@
+{
+    "tableName": "liveData",
+    "partitionKeyName": "streamId",
+    "partitionKeyType": "S",
+    "sortKeyName": "id",
+    "sortKeyType": "N"
+}

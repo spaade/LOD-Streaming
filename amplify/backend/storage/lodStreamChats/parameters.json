@@ -1,0 +1,7 @@
+{
+    "tableName": "lodStreamChats",
+    "partitionKeyName": "streamId",
+    "partitionKeyType": "S",
+    "sortKeyName": "id",
+    "sortKeyType": "N"
+}

@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/companies",
+            "lambdaFunction": "lodCompaniesApiFun",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/companies"
+        }
+    ],
+    "resourceName": "lodCompaniesApi",
+    "apiName": "lodCompaniesApi",
+    "functionArns": [
+        {
+            "lambdaFunction": "lodCompaniesApiFun"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-lodio-main-100605-authRole",
+        "unAuthRoleName": "amplify-lodio-main-100605-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "lodCompaniesApiFun",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

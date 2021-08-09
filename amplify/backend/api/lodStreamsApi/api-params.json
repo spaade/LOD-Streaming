@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/streams",
+            "lambdaFunction": "lodStreamsApiFun",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/streams"
+        }
+    ],
+    "resourceName": "lodStreamsApi",
+    "apiName": "lodStreamsApi",
+    "functionArns": [
+        {
+            "lambdaFunction": "lodStreamsApiFun"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-lodio-prod-103612-authRole",
+        "unAuthRoleName": "amplify-lodio-prod-103612-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "lodStreamsApiFun",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

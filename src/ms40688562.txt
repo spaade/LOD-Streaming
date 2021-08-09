@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Arquivo de verificação de propriedade do domínio para Microsoft 365 local na raiz do site",
+  "Domain": "lod.com.vc",
+  "Id": "b959aae7-ad7e-473d-a9cd-a06bf2a8e89a"
+}

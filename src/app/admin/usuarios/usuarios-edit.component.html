@@ -1,0 +1,228 @@
+<div class="row p-l-20 p-r-20">
+  <div class="col p-t-20 loading-{{ flagLoadingData }}">
+
+    <div class="loading text-center">
+
+      <fa-icon
+        [icon]="['fas', 'spinner']"
+        [spin]="true"
+        style="font-size: 2em;">
+      </fa-icon>
+
+    </div>
+
+    <div class="row loaded-content" *ngIf="!flagLoadingData">
+      <div class="col p-t-20">
+
+        <form (submit)="sendForm()" [formGroup]="cadastroForm">
+
+          <div class="form-group row">
+            <label class="col-4 col-form-label text-right p-r-10" for="txtAcName">
+              Nome:
+            </label>
+            <div class="col-6">
+              <input
+                class="form-control"
+                formControlName="name"
+                id="txtAcName"
+                type="text"
+              />
+            </div>
+          </div>
+          <div class="form-group row" style="margin-top: -15px">
+            <div class="col-sm-6 offset-4">
+
+              <div
+                *ngIf="name.invalid && (name.dirty || name.touched)"
+                class="alert alert-danger txt-xsm"
+                style="margin-bottom: 0px"
+              >
+                <div *ngIf="name.errors.required">
+                  Campo obrigatório.
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label
+              class="col-sm-4 col-form-label text-right"
+              for="txtAcCompanyRole"
+            >
+              Cargo:
+            </label>
+            <div class="col-sm-6">
+              <input
+                class="form-control"
+                formControlName="companyRole"
+                id="txtAcCompanyRole"
+                maxlength="50"
+                type="text"
+              >
+            </div>
+          </div>
+
+          <div class="form-group row" style="margin-top: -15px">
+            <div class="col-sm-6 offset-4">
+              <div
+                *ngIf="companyRole.invalid && (companyRole.dirty || companyRole.touched)"
+                class="alert alert-danger txt-xsm" style="margin-bottom: 0px">
+                <div
+                  *ngIf="companyRole.errors.required">
+                  Campo obrigatório.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-4 col-form-label text-right" for="txtAcEmail">
+              E-mail:
+            </label>
+            <div class="col-sm-6">
+              <input
+                class="form-control"
+                email
+                formControlName="email"
+                id="txtAcEmail"
+                type="email"
+              />
+            </div>
+          </div>
+
+          <div class="form-group row" style="margin-top: -15px">
+            <div class="col-sm-6 offset-4">
+              <div
+                *ngIf="email.invalid && (email.dirty || email.touched)"
+                class="alert alert-danger txt-xsm"
+                style="margin-bottom: 0px">
+                <div
+                  *ngIf="email.errors.required">
+                  Campo obrigatório.
+                </div>
+                <div
+                  *ngIf="email.errors.email">
+                  Email inválido.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-4 col-form-label text-right" for="txtAcPhoneNumber">
+              Telefone:
+            </label>
+            <div class="col-sm-6">
+              <input
+                class="form-control"
+                formControlName="phoneNumber"
+                id="txtAcPhoneNumber"
+                maxlength="20"
+                type="text"
+              />
+            </div>
+          </div>
+
+          <div class="form-group row" style="margin-top: -15px">
+            <div class="col-sm-6 offset-4">
+              <div *ngIf="phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)"
+                   class="alert alert-danger txt-xsm" style="margin-bottom: 0px">
+                <div *ngIf="phoneNumber.errors.required">
+                  Campo obrigatório.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <br>
+          <br>
+
+          <div class="form-group row">
+            <label class="col-4 col-form-label text-right p-r-10" for="txtAcName">
+              Usuário Login:
+            </label>
+            <div class="col-6">
+              <input
+                class="form-control"
+                formControlName="companyUserName"
+                id="txtAcName"
+                type="text"
+              />
+            </div>
+          </div>
+          <div class="form-group row" style="margin-top: -15px">
+            <div class="col-sm-6 offset-4">
+
+              <div
+                *ngIf="companyUserName.invalid && (companyUserName.dirty || companyUserName.touched)"
+                class="alert alert-danger txt-xsm"
+                style="margin-bottom: 0px"
+              >
+                <div *ngIf="companyUserName.errors.required">
+                  Campo obrigatório.
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <label class="col-sm-4 col-form-label text-right" for="txtAcPassword">
+              Senha:
+            </label>
+            <div class="col-sm-6">
+              <input
+                class="form-control"
+                formControlName="companyPassword"
+                id="txtAcPassword"
+                type="text"
+              />
+            </div>
+          </div>
+
+          <div class="form-group row" style="margin-top: -15px">
+            <div class="col-sm-6 offset-4">
+              <div
+                *ngIf="companyPassword.invalid && (companyPassword.dirty || companyPassword.touched)"
+                class="alert alert-danger txt-xsm" style="margin-bottom: 0px">
+                <div
+                  *ngIf="companyPassword.errors.required">
+                  Campo obrigatório.
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="form-group row">
+            <div class="col-6 offset-md-4">
+              <button class="btn btn-primary m-r-5" style="min-width: 7em" type="submit">
+                <fa-icon
+                  *ngIf="!flagSavingData"
+                  [icon]="['fas', 'save']"
+                ></fa-icon>
+                <fa-icon
+                  *ngIf="flagSavingData"
+                  [icon]="['fas', 'spinner']"
+                  [spin]="true"
+                ></fa-icon>
+                <span *ngIf="!flagSavingData"> Salvar </span>
+              </button>
+
+              <button class="btn btn-danger" style="min-width: 7em" routerLink="/admin/usuarios">
+                <fa-icon
+                  *ngIf="!flagSavingData"
+                  [icon]="['fas', 'ban']"
+                ></fa-icon>
+                <span *ngIf="!flagSavingData"> Cancelar </span>
+              </button>
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</div>

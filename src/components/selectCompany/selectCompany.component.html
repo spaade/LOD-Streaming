@@ -1,0 +1,85 @@
+<div class="sub-nav select-company" style="background-color: rgb(168 180 195); height: 50px">
+  <div class="row">
+    <div class="col">
+
+      <form class="form-inline" (submit)="selectCompany()">
+        <div class="form-group" style="width: 100%">
+
+          <div
+            *ngIf="!flagHasCompany"
+            style="width: 100%"
+          >
+
+            <label
+              for="cboUsersSelectClient"
+            >
+              <span *ngIf="!flagHasCompany">
+                Selecione o Cliente:
+              </span>
+              <span *ngIf="flagHasCompany" style="padding-top: 5px; display: inline-block;">
+                Cliente: <strong> {{ appDataCompanies.selectedCompany.companyName }}</strong>
+              </span>
+            </label>
+            <select
+              id="cboUsersSelectClient"
+              name="cboUsersSelectClient"
+              class="form-control form-control-sm"
+              *ngIf="!flagHasCompany"
+              [(ngModel)]="selectedCompanyId"
+              style="width: 20em; margin: 0 0.5em"
+            >
+              <option
+                *ngFor="let company of companies"
+                [value]="company.id"
+              >
+                {{ company.companyName }}
+              </option>
+            </select>
+
+            <button
+              type="submit"
+              class="btn btn-primary btn-sm"
+              (click)="selectCompany()"
+              style="width: 5em; height: 2.2em"
+              *ngIf="!flagHasCompany"
+            >
+              OK
+            </button>
+
+          </div>
+          <div
+            *ngIf="flagHasCompany"
+            style="width: 100%; margin-top: -6px;"
+          >
+
+            <button
+              *ngIf="flagHasCompany"
+              (click)="resetCompany()"
+              class="btn"
+              style="margin: 3px 0px 0px 8px; float:left"
+            >
+              <fa-icon [icon]="['fas', 'city']"></fa-icon>
+            </button>
+
+            <label
+              for="cboUsersSelectClient"
+            >
+              <span *ngIf="!flagHasCompany">
+                Selecione o Cliente:
+              </span>
+              <span *ngIf="flagHasCompany" style="padding-top: 5px; display: inline-block;">
+                Cliente: <strong> {{ appDataCompanies.selectedCompany.companyName }}</strong>
+              </span>
+            </label>
+
+
+          </div>
+
+        </div>
+
+
+      </form>
+
+    </div>
+  </div>
+</div>

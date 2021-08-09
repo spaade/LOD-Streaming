@@ -1,0 +1,182 @@
+
+:root .body-vigor  {
+  --amplify-primary-color: #0041a4;
+  --amplify-primary-tint: #0041a4;
+  --amplify-primary-shade: #041b3d;
+  --amplify-background-color: #2eb4c8;
+  --amplify-secondary-contrast: #91d4de;
+  --amplify-secondary-color: #fff;
+}
+
+
+.body-vigor {
+
+  /*
+  background-color: linear-gradient(135deg,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%);
+  */
+
+  background-color: #a53061;
+
+  background-image:url(/assets/clientes/vigor/VIV-cadastro-fd.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+
+/* event id  submodule */
+.body-vigor.submodule-teste,
+.body-vigor.submodule-viv-varejo-tecnico {
+
+  background-image:url(/assets/clientes/vigor/VIV-stream-fd.jpg);
+}
+
+.body-vigor .subscription-first-row .col {
+
+  min-height: 130px;
+
+  background-image:url(/assets/clientes/vigor/VIV-cadastro-logo.gif);
+  background-repeat: no-repeat;
+  background-position: center 10px ;
+}
+
+.body-vigor .subscription-panel .card {
+
+  width:440px;
+  margin-left: calc(50% - 220px);
+  margin-bottom: 70px;
+  background-color: #2eb4c8;
+}
+
+.body-vigor .subscription-panel .card input {
+
+  background-color: #91d4de;
+  border:none;
+  border-radius: 0;
+}
+
+.body-vigor .subscription-panel .card h2 {
+  
+  color:#fff;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.body-vigor .subscription-panel .card label {
+
+  color:#fff;
+  font-size: 0.9em;
+}
+
+.body-vigor .subscription-panel .card a {
+  text-shadow: none;
+  color: #f8d5b7;
+  text-decoration: underline;
+}
+
+
+/* navbar bg */
+.body-vigor .navbar {
+
+  color: #fff;
+  background: #ed6d84 !important;
+}
+
+.body-vigor .event-logo {
+  margin: 4px 10px 8px 20px;
+}
+
+.body-vigor .toolbar {
+
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.body-vigor .btn-logout {
+
+  float: right;
+  margin: 10px 0px 0px 0px;
+  color: #fff;
+  opacity: 0.8;
+  transition: 0.1s linear all;
+}
+
+.body-vigor .btn-logout:hover {
+
+  text-decoration: none;
+  opacity: 1;
+  transition: 0.1s linear all;
+}
+
+.body-vigor .alert {
+  border-radius: 0;
+}
+
+.body-vigor .alert-danger {
+  color: #a82e61;
+}
+
+.body-vigor .btn-primary {
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #0041a4;
+  border-color: #0041a4;
+  border-radius: 0;
+}
+
+.body-vigor  .toolbar {
+  
+  background-color: rgba(0, 0, 0, 0.6);
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.body-vigor .panel-loading-msg {
+
+  color: #fff;
+  line-height: 2.3em;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2)
+}
+
+
+
+.body-vigor .event-stage footer {
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 180px;
+}
+
+.body-vigor .footer-btn {
+
+  display: inline-block;
+
+  width: 100px;
+  height: 120px;
+
+  margin: auto;
+  margin-top: 12px;
+
+  text-align: center;
+  transition: 0.1s ease-in all;
+}
+
+.body-vigor .footer-btn:hover {
+  
+  margin-top: 4px;
+  transition: 0.1s ease-out all; 
+}
+
+.body-vigor .footer-btn span {
+
+  display: inline-block;
+  margin-top: 5px;
+  width: 100%;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: none;
+  font-size: 0.8em;
+}

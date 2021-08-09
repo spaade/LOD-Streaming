@@ -1,0 +1,320 @@
+<nav class="navbar navbar-expand-lg navbar-light p-l-0">
+  <div class="container-fluid" style="height:94%">
+
+    <button
+      class="btn {{ flagShowingLeftPanel ? 'btn-light' : 'btn-dark' }}"
+      style="margin-right: 1em"
+      (click)="toggleLeftPanel()"
+      *ngIf="showTopMenuBtn"
+    >
+      <fa-icon [icon]="['fas', 'bars']"></fa-icon>
+    </button>
+
+    <img
+      [src]="eventLogo"
+      alt="Logo do evento"
+      *ngIf="eventLogo"
+      class="event-logo"
+    >
+
+    <!--label id="lblUsuario" style="padding-top: 0.5em;">
+      Olá {{ appAuth.user.username | firstName }}
+    </label-->
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <form class="" style="position:absolute; top:0.6em;right:1em">
+
+        <div class="btn-group" style="margin-top: 17px">
+
+          <button
+            type="button"
+            class="btn dropdown-toggle"
+            data-toggle="dropdown"
+            aria-haspopup="true"
+            aria-expanded="false"
+            style="color: #fff"
+          >
+            <fa-icon icon="user"></fa-icon>
+            {{ appAuth.user.username | firstName }}
+          </button>
+          <div class="dropdown-menu" style="left: -77px">
+
+            <a class="dropdown-item" [href]="logoutUrl">
+              <fa-icon [icon]="['fas', 'arrow-circle-left']"></fa-icon>
+              Logout
+            </a>
+
+          </div>
+
+        </div>
+
+      </form>
+    </div>
+  </div>
+</nav>
+
+<div
+  class="row no-gutters panel-loading-msg  page-loading-{{ flagPageLoading }}"
+>
+  <div class="col txt-center">
+
+    <!--i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i-->
+    <fa-icon [icon]="['fas', 'spinner']" [spin]="true" style="font-size: 25px;"></fa-icon>
+
+  </div>
+</div>
+
+<div
+  class="row no-gutters panel-agreement showing-agreement-{{ flagShowingAgreement }}"
+>
+  <div class="col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-sm-12 txt-center" style="padding-top: 30px">
+
+    <div class="card">
+      <div class="card-body">
+
+        <div class="row">
+          <div class="col p-b-10" i18n>
+
+            <fa-icon [icon]="['fas', 'exclamation-circle']" style="font-size: 1em;"></fa-icon>
+            Antes de prosseguir, é necessário revisar os termos:
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col" style="height: 24em">
+
+            <iframe
+              id="agreementContent"
+              src=""
+              style="width: 100%; height: 100%; border: 1px solid #6666"
+            ></iframe>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-center p-t-20">
+
+            <button
+              class="btn btn-secondary"
+              [disabled]="flagPostingAgreement"
+              (click)="postAgreement()"
+            >
+
+              <span *ngIf="!flagPostingAgreement" i18n>
+                Concordar e Continuar <fa-icon [icon]="['fas', 'arrow-circle-right']"></fa-icon>
+              </span>
+              <span *ngIf="flagPostingAgreement" i18n>
+                Por favor Aguarde...
+              </span>
+            </button>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container-fluid" style="height:94%">
+
+  <div
+    class="row"
+    style="position:relative; height:75%; top: 50px;"
+    *ngIf="!eventRunning && !flagPageLoading"
+  >
+    <div class="col">
+
+      <div class="card card-event-past shadow">
+        <div class="row">
+          <div class="col txt-center" style=" padding: 30px 0px 25px 0px">
+
+            <p style="line-height: 2em;" *ngIf="isEventInTheFuture">
+              <span i18n>
+                Início do evento: {{ event.startDate | date:'long' }}
+              </span>
+              <br>
+              <span i18n>
+                Em {{ timeToEvent }}
+              </span>
+              <br>
+            </p>
+
+            <p style="line-height: 2em;" *ngIf="isEventInThePast" i18n>
+              Evento finalizado em {{ event.endDate | date:'long' }}
+            </p>
+
+            <p style="line-height: 2em; padding: 10px">
+              <a href="javascript:;" [routerLink]="routePrefix" i18n>Voltar</a>
+            </p>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div
+    class="row"
+    style="position:relative; height:75%; top: 50px;"
+    *ngIf="eventRunning && !flagPageLoading && !flagShowingAgreement"
+  >
+
+    <div class="col show-left-panel-{{ flagShowingLeftPanel }}">
+
+      <div class="row">
+        <div class="col-5 left-panel">
+
+          <div class="row">
+            <div class="col card chat-card shadow" style="border: 1px solid rgba(0, 0, 0, 0.2)">
+
+              <div class="sub-nav event">
+                <div class="row">
+                  <div class="col">
+
+                    <ul class="nav nav-pills align-items-center justify-content-center">
+
+                      <li class="nav-item">
+                        <button
+                          class="btn btn-link text-decoration-none {{ viewPanel == 'chat' ? 'active' : '' }}"
+                          (click)="viewPanel = 'chat'"
+                        >
+                          <fa-icon [icon]="['fas', 'comment']"></fa-icon>
+                          Chat
+                        </button>
+                      </li>
+
+                      <!--li class="nav-item">
+                        <button
+                          class="btn btn-link text-decoration-none {{ viewPanel == 'quiz' ? 'active' : '' }}"
+                          (click)="viewPanel = 'quiz'"
+                        >
+                          <fa-icon [icon]="['fas', 'comments']"></fa-icon>
+                          Quiz
+                        </button>
+                      </li>
+
+                      <li class="nav-item">
+                        <button
+                          class="btn btn-link text-decoration-none {{ viewPanel == 'info' ? 'active' : '' }}"
+                          (click)="viewPanel = 'info'"
+                        >
+                          <fa-icon [icon]="['fas', 'info']"></fa-icon>
+                          Evento
+                        </button>
+                      </li>
+
+                      <li class="nav-item">
+                        <button
+                          class="btn btn-link text-decoration-none {{ viewPanel == 'help' ? 'active' : '' }}"
+                          (click)="viewPanel = 'help'"
+                        >
+                          <fa-icon [icon]="['fas', 'question']"></fa-icon>
+                          Ajuda
+                        </button>
+                      </li-->
+
+                    </ul>
+
+                  </div>
+                </div>
+
+                <div class="row" *ngIf="viewPanel == 'chat'">
+                  <div class="col panel-left-content panel-{{ viewPanel }}">
+                    <app-admin-evento-chat></app-admin-evento-chat>
+                  </div>
+                </div>
+
+                <div class="row" *ngIf="viewPanel == 'quiz'">
+                  <div class="col panel-left-content panel-{{ viewPanel }} ">
+                    <app-admin-evento-quizes></app-admin-evento-quizes>
+                  </div>
+                </div>
+
+                <div class="row" *ngIf="viewPanel == 'info'">
+                  <div class="col panel-left-content panel-{{ viewPanel }} ">
+                    <app-admin-evento-info></app-admin-evento-info>
+                  </div>
+                </div>
+
+                <div class="row" *ngIf="viewPanel == 'help'">
+                  <div class="col panel-left-content panel-{{ viewPanel }} ">
+                    <app-admin-evento-ajuda></app-admin-evento-ajuda>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col right-panel" style="max-height: 42em; padding:20px">
+
+          <iframe
+            id="vimeoFrame"
+            src="https://vimeo.com/event/890896/embed/39926ad8cc"
+            *ngIf="companyId == 'sephora'"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+            style="position:absolute;top:0px;left:0;width:100%;height:100%;"
+          ></iframe>
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+</div>
+
+<footer class="event-footer" *ngIf="eventRunning && !flagPageLoading">
+
+  <div class="row">
+    <div class="col-sm-10 offset-sm-1 col-md-6 offset-md-3 col-lg-6 offset-lg-3 col-xlg-6 offset-xlg-3">
+
+      <!--div class="row">
+        <div class="col">
+
+          <a
+            href="javascript:;"
+            class="footer-btn"
+          >
+            <img src="/assets/clientes/vigor/btn-chat.png" alt="">
+            <span>chat <br>&nbsp;</span>
+          </a>
+
+        </div>
+        <div class="col">
+
+          <a
+            href="javascript:;"
+            class="footer-btn"
+          >
+            <img src="/assets/clientes/vigor/btn-whats.png" alt="">
+            <span>whatsapp <br>&nbsp;</span>
+          </a>
+
+        </div>
+        <div class="col">
+
+          <a
+            href="javascript:;"
+            class="footer-btn"
+          >
+            <img src="/assets/clientes/vigor/btn-espaco.png" alt="">
+            <span>conheça o<br>espaço viv</span>
+          </a>
+
+        </div>
+      </div-->
+
+    </div>
+  </div>
+
+</footer>

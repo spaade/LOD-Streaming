@@ -1,0 +1,23 @@
+{
+  "version": "1",
+  "triggerSource": "UserMigration_Authentication",
+  "region": "us-east-1",
+  "userPoolId": "us-east-1_FoD2o0roz",
+  "userName": "lod@lod.com.vc",
+  "callerContext": {
+      "awsSdkVersion": "aws-sdk-unknown-unknown",
+      "clientId": "5v9qr4mejcdfh5bopkpf83hlgg"
+  },
+  "request": {
+      "password": "123456",
+      "validationData": {},
+      "userAttributes": null
+  },
+  "response": {
+      "userAttributes": null,
+      "forceAliasCreation": null,
+      "finalUserStatus": null,
+      "messageAction": null,
+      "desiredDeliveryMediums": null
+  }
+}

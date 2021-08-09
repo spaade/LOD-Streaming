@@ -1,0 +1,186 @@
+
+:root .body-zoetis  {
+  --amplify-primary-color: #0041a4;
+  --amplify-primary-tint: #0041a4;
+  --amplify-primary-shade: #041b3d;
+  --amplify-background-color: #2eb4c8;
+  --amplify-secondary-contrast: #91d4de;
+  --amplify-secondary-color: #fff;
+}
+
+
+.body-zoetis {
+
+  /*
+  background-color: linear-gradient(135deg,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%);
+  */
+
+  background-color: #a53061;
+
+  background-image:url(/assets/clientes/zoetis/zoetis-04-14.jpg);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+
+/* event id  submodule */
+.body-zoetis.submodule-teste,
+.body-zoetis.submodule-viv-varejo-tecnico {
+
+  background-image:url(/assets/clientes/zoetis/zoetis-04-14.jpg);
+}
+
+.body-zoetis .subscription-first-row .col {
+
+  min-height: 130px;
+
+  background-image:url(/assets/clientes/zoetis/zoetis-04-14.jpg);
+  background-repeat: no-repeat;
+  background-position: center 10px ;
+}
+
+.body-zoetis .subscription-panel .card {
+
+  width:440px;
+  margin-left: calc(50% - 220px);
+  margin-bottom: 70px;
+  background-color: #2eb4c8;
+}
+
+.body-zoetis .subscription-panel .card input {
+
+  background-color: #91d4de;
+  border:none;
+  border-radius: 0;
+}
+
+.body-zoetis .subscription-panel .card h2 {
+  
+  color:#fff;
+  text-transform: uppercase;
+  font-size: 15px;
+}
+
+.body-zoetis .subscription-panel .card label {
+
+  color:#fff;
+  font-size: 0.9em;
+}
+
+.body-zoetis .subscription-panel .card a {
+  text-shadow: none;
+  color: #f8d5b7;
+  text-decoration: underline;
+}
+
+
+/* navbar bg */
+.body-zoetis .navbar {
+
+  color: #fff;
+  background: #ed6d84 !important;
+}
+
+.body-zoetis .event-logo {
+  margin: 4px 10px 8px 20px;
+}
+
+.body-zoetis .toolbar {
+
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.body-zoetis #navbarSupportedContent .btn-group {
+  margin-top: 0 !important;
+}
+
+.body-zoetis .btn-logout {
+
+  float: right;
+  margin: 10px 0px 0px 0px;
+  color: #fff;
+  opacity: 0.8;
+  transition: 0.1s linear all;
+}
+
+.body-zoetis .btn-logout:hover {
+
+  text-decoration: none;
+  opacity: 1;
+  transition: 0.1s linear all;
+}
+
+.body-zoetis .alert {
+  border-radius: 0;
+}
+
+.body-zoetis .alert-danger {
+  color: #a82e61;
+}
+
+.body-zoetis .btn-primary {
+  text-transform: uppercase;
+  color: #fff;
+  background-color: #0041a4;
+  border-color: #0041a4;
+  border-radius: 0;
+}
+
+.body-zoetis  .toolbar {
+  
+  background-color: rgba(0, 0, 0, 0.6);
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+.body-zoetis .panel-loading-msg {
+
+  color: #fff;
+  line-height: 2.3em;
+  text-shadow: 1px 2px 2px rgba(0, 0, 0, 0.2)
+}
+
+
+
+.body-zoetis .event-stage footer {
+
+  position: absolute;
+  left: 0;
+  bottom: 0;
+
+  width: 100%;
+  height: 180px;
+}
+
+.body-zoetis .footer-btn {
+
+  display: inline-block;
+
+  width: 100px;
+  height: 120px;
+
+  margin: auto;
+  margin-top: 12px;
+
+  text-align: center;
+  transition: 0.1s ease-in all;
+}
+
+.body-zoetis .footer-btn:hover {
+  
+  margin-top: 4px;
+  transition: 0.1s ease-out all; 
+}
+
+.body-zoetis .footer-btn span {
+
+  display: inline-block;
+  margin-top: 5px;
+  width: 100%;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: none;
+  font-size: 0.8em;
+}

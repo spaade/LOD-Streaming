@@ -1,0 +1,81 @@
+
+<div class="row">
+  <div class="col" id="panelChat">
+
+    <div *ngIf="flagChatLoaded && !chatHasMessages" class="no-msg" i18n>
+
+      Sem mensagens...
+
+    </div>
+
+    <div *ngIf="!flagChatLoaded" class="no-msg">
+
+      <fa-icon [icon]="['fas', 'spinner']" [spin]="true" style="font-size: 25px;"></fa-icon>
+
+    </div>
+    <div *ngIf="chatHasMessages">
+
+      <div
+        *ngFor="let msg of chatMessages"
+        class="panel-chat-msg is-logged-user-{{ msg.isLoggedUser }} is-admin-{{ msg.isAdmin }} msg-{{ msg.id }}"
+      >
+        <div [innerHTML]="msg.text" class="msg-body">
+
+        </div>
+        <div class="msg-meta">
+          <span
+            *ngIf="!msg.isLoggedUser"
+            class="msg-author"
+          >
+            {{ msg.userAlias }} &nbsp;|
+          </span>
+          <span class="msg-date">
+            <small>{{ msg.msgDate | date:'shortTime' }}</small>
+          </span>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col">
+
+    <div class="form-group">
+      <label
+        for="txtPostChat"
+        style="padding: 1em 0em 0em 0em; font-size: 0.7em;"
+        i18n
+      >
+        Falar:
+      </label>
+      <textarea
+        class="form-control"
+        id="txtPostChat"
+        style="min-height: 4em; font-size: 0.9em;"
+      ></textarea>
+    </div>
+    <div class="form-group text-right">
+
+      <button
+        (click)="appChat.postChat()"
+        [disabled]="flagPostingChat"
+        class="btn btn-secondary btn-sm"
+        style="min-height: 25px;"
+      >
+        <span *ngIf="!flagPostingChat" i18n>
+          Enviar
+          <fa-icon [icon]="['fas', 'chevron-right']"></fa-icon>
+        </span>
+
+        <span *ngIf="flagPostingChat && postingChatDelay > 0">
+          <small>{{ postingChatDelay }}</small>
+        </span>
+
+      </button>
+
+    </div>
+
+  </div>
+</div>

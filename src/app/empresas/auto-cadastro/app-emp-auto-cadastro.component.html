@@ -1,0 +1,384 @@
+
+<div class="row subscription-panel">
+  <div class="col" style="padding-top: 70px;">
+
+    <div class="card shadow">
+      <div class="card-body" style="padding: 0px 70px">
+
+        <div class="row subscription-first-row">
+          <div class="col text-center">
+
+            <!-- custom content here via css -->
+            <h2 style="margin: 135px 0px 20px 0px" i18n>
+              Faça o seu cadastro
+            </h2>
+
+          </div>
+        </div>
+        <div class="row" *ngIf="enrollMsg != '' ">
+          <div class="col">
+
+            <div class="alert alert-info" *ngIf="flagEnrollSuccess">
+              <span i18n>
+                Cadastro realizado com sucesso!
+              </span>
+              <br>
+              <span i18n>
+                Você pode prosseguir para o
+              </span>
+              <a href="javascript:;" [routerLink]="loginLink">
+                login
+              </a>.
+            </div>
+
+          </div>
+        </div>
+        <form (ngSubmit)="sendForm()" [formGroup]="cadastroForm" *ngIf="!flagEnrollSuccess">
+
+          <div class="row" style="margin-bottom: -7px">
+            <label
+              for="txtAcName"
+              class="col col-form-label"
+              i18n
+            >
+              Nome
+            </label>
+          </div>
+          <div class="form-group row">
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                id="txtAcName"
+                formControlName="userName"
+              >
+            </div>
+          </div>
+          <div class="form-group row" style="margin-top: -15px">
+            <div class="col">
+
+              <div
+                *ngIf="userName.invalid && (userName.dirty || userName.touched)"
+                class="alert alert-danger txt-xsm"
+                style="margin-bottom: 0px"
+              >
+                <div *ngIf="userName.errors.required" i18n>
+                  Campo obrigatório.
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="row" style="margin-bottom: -7px">
+            <label
+              for="txtAcEmail"
+              class="col col-form-label"
+            >
+              E-mail
+            </label>
+          </div>
+          <div class="form-group row">
+            <div class="col">
+              <input
+                type="email"
+                email
+                class="form-control"
+                id="txtAcEmail"
+                formControlName="email"
+              >
+            </div>
+          </div>
+          <div class="form-group row" style="margin-top: -15px">
+            <div class="col">
+
+              <div
+                *ngIf="email.invalid && (email.dirty || email.touched)"
+                class="alert alert-danger txt-xsm"
+                style="margin-bottom: 0px"
+              >
+                <div *ngIf="email.errors.required" i18n>
+                  Campo obrigatório.
+                </div>
+                <div *ngIf="email.errors.email" i18n>
+                  Email inválido.
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="row" style="margin-bottom: -7px">
+            <label
+              for="txtAcPassword"
+              class="col col-form-label"
+              i18n
+            >
+              Senha:
+            </label>
+          </div>
+          <div class="form-group row">
+            <div class="col">
+              <input
+                [type]="passInputType"
+                class="form-control"
+                id="txtAcPassword"
+                formControlName="password"
+              >
+            </div>
+          </div>
+          <div class="form-group row" style="margin-top: -15px">
+            <div class="col">
+
+              <div
+                *ngIf="password.invalid && (password.dirty || password.touched)"
+                class="alert alert-danger txt-xsm"
+                style="margin-bottom: 0px"
+              >
+                <div *ngIf="password.errors.required" i18n>
+                  Campo obrigatório.
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div
+            class="row"
+            style="margin-bottom: -7px"
+            *ngIf="showField('docNumber')"
+          >
+            <label
+              for="txtAcDocNumber"
+              class="col col-form-label"
+            >
+              CPF
+            </label>
+          </div>
+          <div
+            class="form-group row"
+            *ngIf="showField('docNumber')"
+          >
+            <div class="col">
+              <input
+                type="text"
+                maxlength="11"
+                class="form-control"
+                id="txtAcDocNumber"
+                formControlName="docNumber"
+              >
+            </div>
+          </div>
+          <div class="form-group row" style="margin-top: -15px">
+            <div class="col">
+
+              <div
+                *ngIf="docNumber.invalid && (docNumber.dirty || docNumber.touched)"
+                class="alert alert-danger txt-xsm"
+                style="margin-bottom: 0px"
+              >
+                <div *ngIf="docNumber.errors.required" i18n>
+                  Campo obrigatório.
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div
+            class="row"
+            style="margin-bottom: -7px"
+            *ngIf="showField('companyBranch')"
+          >
+            <label
+              for="txtAcBranch"
+              class="col col-form-label"
+              i18n
+            >
+              Nome do Estabelecimento
+            </label>
+          </div>
+          <div
+            class="form-group row"
+            *ngIf="showField('companyBranch')"
+          >
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                id="txtAcBranch"
+                maxlength="50"
+                formControlName="companyBranch"
+              >
+            </div>
+          </div>
+          <div class="form-group row" style="margin-top: -15px">
+            <div class="col">
+
+              <div
+                *ngIf="companyBranch.invalid && (companyBranch.dirty || companyBranch.touched)"
+                class="alert alert-danger txt-xsm"
+                style="margin-bottom: 0px"
+              >
+                <div *ngIf="companyBranch.errors.required" i18n>
+                  Campo obrigatório.
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div
+            class="row"
+            style="margin-bottom: -7px"
+            *ngIf="showField('companyRole')"
+          >
+            <label
+              for="txtAcCompanyRole"
+              class="col col-form-label"
+              i18n
+            >
+              Cargo (Opcional)
+            </label>
+          </div>
+          <div
+            class="form-group row"
+            *ngIf="showField('companyRole')"
+          >
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                id="txtAcCompanyRole"
+                maxlength="50"
+                formControlName="companyRole"
+              >
+            </div>
+          </div>
+
+          <div
+            class="row"
+            style="margin-bottom: -7px"
+            *ngIf="showField('phoneNumber')"
+          >
+            <label
+              for="txtAcPhoneNumber"
+              class="col col-form-label"
+              i18n
+            >
+              Telefone
+            </label>
+          </div>
+          <div
+            class="form-group row"
+            *ngIf="showField('phoneNumber')"
+          >
+            <div class="col">
+              <input
+                type="text"
+                class="form-control"
+                id="txtAcPhoneNumber"
+                maxlength="20"
+                formControlName="phoneNumber"
+              >
+            </div>
+          </div>
+          <div class="form-group row" style="margin-top: -15px">
+            <div class="col">
+
+              <div
+                *ngIf="phoneNumber.invalid && (phoneNumber.dirty || phoneNumber.touched)"
+                class="alert alert-danger txt-xsm"
+                style="margin-bottom: 0px"
+              >
+                <div *ngIf="phoneNumber.errors.required" i18n>
+                  Campo obrigatório.
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!--div class="form-group row">
+            <label
+              for="txtAcEventId"
+              class="col-sm-4 col-form-label"
+            >
+              Código do Evento:
+            </label>
+            <div class="col-sm-6">
+              <input
+                type="email"
+                class="form-control"
+                id="txtAcEventId"
+                formControlName="eventId"
+              >
+            </div>
+          </div>
+          <div class="form-group row" style="margin-top: -15px">
+            <div class="col">
+
+              <div
+                *ngIf="eventId.invalid && (eventId.dirty || eventId.touched)"
+                class="alert alert-danger txt-xsm txt-sm"
+                style="margin-bottom: 0px"
+              >
+                <div *ngIf="eventId.errors.required">
+                  Campo obrigatório.
+                </div>
+              </div>
+
+            </div>
+          </div-->
+
+          <div class="form-group row">
+            <div class="col text-center p-t-10">
+
+              <button
+                type="submit"
+                class="btn btn-primary"
+                [disabled]="flagSavingData || flagEnrollSuccess"
+              >
+                <span
+                  *ngIf="!flagSavingData"
+                  i18n
+                >
+                  Realizar Cadastro
+                </span>
+                <span
+                  *ngIf="flagSavingData"
+                  i18n
+                >
+
+                  <fa-icon
+                    [icon]="['fas', 'spinner']"
+                    [spin]="true"
+                  >
+                  </fa-icon>
+                  Aguarde...
+                </span>
+              </button>
+
+              <p class="p-t-20">
+                <span i18n>
+                  Já tem cadastro?
+                </span>
+                <a
+                  href="javascript:;"
+                  [routerLink]="loginRoute"
+                  i18n
+                >
+                  Faça login aqui
+                </a>
+              </p>
+            </div>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+

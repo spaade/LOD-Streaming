@@ -1,0 +1,190 @@
+
+:root .body-sephora  {
+  --amplify-primary-color: #693c2e;
+  --amplify-primary-tint: #693c2e;
+  --amplify-primary-shade: #442319;
+  
+  --amplify-background-color: rgba(255, 255, 255, 0.95);
+
+  /*
+  --amplify-background-color: #2eb4c8;
+  --amplify-secondary-contrast: #91d4de;
+  --amplify-secondary-color: #fff;
+  */
+}
+
+.body-sephora .btn-primary {
+  color: #fff;
+  background-color: #693c2e;
+  border-color: #442319;
+}
+
+.body-sephora {
+
+  /*
+  background-color: linear-gradient(135deg,  rgba(30,87,153,1) 0%,rgba(41,137,216,1) 50%,rgba(32,124,202,1) 51%,rgba(125,185,232,1) 100%);
+  */
+
+  background-color: #fff;
+
+  background-image:url(/assets/clientes/sephora/fd-cluster-digital.png);
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+
+/* event id  submodule */
+.body-sephora.submodule-teste,
+.body-sephora.submodule-viv-varejo-tecnico {
+
+  background-image:url(/assets/clientes/sephora/fd-cluster-digital.png);
+}
+
+
+
+/* navbar bg */
+.body-sephora .navbar {
+
+  color: #fff;
+  background: rgba(0, 0, 0, 0.888) !important;
+  min-height: 88px;
+}
+
+.body-sephora .event-logo {
+  display: none;
+}
+
+.body-sephora .toolbar {
+
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.body-sephora .btn-logout {
+
+  float: right;
+  margin: 10px 0px 0px 0px;
+  color: #fff;
+  opacity: 0.8;
+  transition: 0.1s linear all;
+}
+
+.body-sephora .btn-logout:hover {
+
+  text-decoration: none;
+  opacity: 1;
+  transition: 0.1s linear all;
+}
+
+.body-sephora .subscription-first-row h2 {
+
+  font-size: 16px;
+  margin: 30px 0px 20px 0px !important;
+}
+
+.body-sephora .subscription-panel {
+
+  margin-top: 200px;
+  padding-bottom: 100px;
+}
+
+.body-sephora .subscription-panel .card {
+
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.body-sephora .subscription-panel .card {
+
+  background-color: rgba(255, 255, 255, 0.95);
+}
+
+.body-sephora .panel-loading-msg {
+
+  color: #222;
+  text-shadow: 1px 1px 2px #fff;
+}
+
+.body-sephora .panel-loading-msg > div {
+
+  margin-left: 30%;
+  margin-right: 30%;
+  border-radius: 5px;
+  padding: 20px;
+
+  white-space: nowrap;
+  
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.body-sephora .panel-loading-msg.page-loading-false {
+  
+  margin-bottom: -122px;
+}
+
+.body-sephora .event-footer {
+  display: none;
+}
+/*
+.body-sephora #navbarSupportedContent form{ 
+
+  top: -3px !important;
+}
+*/
+
+.body-sephora .panel-event-home {
+  margin-top: 220px;
+}
+
+.body-sephora .left-panel .nav-item {
+  margin-right: 1em;
+}
+
+.body-sephora .left-panel .nav-item .btn {
+
+  color:#666;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 0;
+}
+
+.body-sephora .left-panel .nav-item .btn:hover {
+
+  color:#222;
+  transition: 0.1s linear all;
+  border-bottom-color: #666;
+}
+
+.body-sephora .left-panel .nav-item .active,
+.body-sephora .left-panel .nav-item .active:hover {
+
+  color:#222;
+  transition: 0.1s linear all;
+  border-bottom-color: #222;
+}
+
+.body-sephora .card-event-past {
+
+  margin: 8em 20% 0em 20%;
+}
+
+.body-sephora .card {
+
+  background-color: rgba(255, 255, 255, 0.93 );
+}
+
+.body-sephora .left-panel > div > .card {
+
+  padding-top: 10px;
+  padding-bottom: 15px;
+}
+
+
+@media screen and (max-width: 1024px) {
+
+
+  .body-sephora .panel-loading-msg > div {
+
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+}

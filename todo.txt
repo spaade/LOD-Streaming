@@ -1,0 +1,29 @@
+
+EVENTO
+
+  G interface de login proprietaria
+  G3 interface lateral esquerda com paineis:
+    - chat
+    - quizes
+
+  L customizar o form de auto cadastro
+  L acessar evento sem usuario tem que ir pro login
+  L customizar o form de login
+  
+  L replugar o heartbeat
+  L replugar o chat
+  L apareceer o quiz
+  G Mensagem de cadastro com sucesso feinha, link cor ruim
+
+ADMIN
+
+  L - crud eventos - com sessoes
+  L - dar logout do cara pelo admin (tela de edição do usuário)
+
+
+MAKE ALL PUTS Property-safe
+  dashboard do evento para admins
+  traduzir ui, erros de auth
+  UserMigration failed with error Usuário/Senha inválidos..
+  Incorrect username or password.
+

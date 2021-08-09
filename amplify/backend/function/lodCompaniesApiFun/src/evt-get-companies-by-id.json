@@ -1,0 +1,135 @@
+{
+  "evt": {
+      "resource": "/companies/{proxy+}",
+      "path": "/companies/vigor",
+      "httpMethod": "GET",
+      "headers": {
+          "Accept": "*/*",
+          "Accept-Encoding": "gzip, deflate, br",
+          "Authorization": "Bearer eyJraWQiOiJQb2ZpVUo1XC9DdWZkemdqblpwZHlcLzNZbktDaW5FMjBoUlprdEpac3lkS2c9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiIxNTEwZGE5YS0yNTk3LTQ1Y2MtODQ4ZC1jODcwNGFlYzUxYjAiLCJhdWQiOiI1djlxcjRtZWpjZGZoNWJvcGtwZjgzaGxnZyIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJldmVudF9pZCI6IjYwNjYxZTU5LWNjYTYtNGZjYy04MWMwLTAwMjI5MDkwNzcxMiIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjE1NzIxODI2LCJwcm9maWxlIjoibG9kLWFkbWluIiwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfRm9EMm8wcm96IiwiY29nbml0bzp1c2VybmFtZSI6ImxvZCIsImV4cCI6MTYxNTcyNTQyNiwiaWF0IjoxNjE1NzIxODI2LCJlbWFpbCI6ImxvZEBsb2QuY29tLnZjIn0.Qa2SzgCtgyD0Fc_95fJLFdLEsxg6OCgs8L8OQnroSWTkc7Kdsd-irhnhfndif30O4GK59m0DUIjCcyyIOR1AgRjhJybWErZkrlYkRxTITl0Cj8TmuhI_dTDHAIm_AZUO6A4BlXxBF3SwlFE3aLmb93CBM5yyR5LEvU-yDkCO4CnAoQzRmUlsKZQxIT2HTHdWnLYrhV_UCcq_pYoiQnGdOTbSMA_B4PLAxwXC8p_qod6Zaajvh63fANvjTp981tgniVAh9yYZONu5H8kbbxfnlg8xse8eXzFiL82YjYaJFcR11ztTbJIK4BhPKnQv0g3LPhxJpoD_MEC8Rax7RyAtTQ",
+          "Cache-Control": "no-cache",
+          "CloudFront-Forwarded-Proto": "https",
+          "CloudFront-Is-Desktop-Viewer": "true",
+          "CloudFront-Is-Mobile-Viewer": "false",
+          "CloudFront-Is-SmartTV-Viewer": "false",
+          "CloudFront-Is-Tablet-Viewer": "false",
+          "CloudFront-Viewer-Country": "BR",
+          "Host": "5jwpfv4bl2.execute-api.us-east-1.amazonaws.com",
+          "Postman-Token": "1067f070-deff-4198-bbf9-b0da679f2657",
+          "User-Agent": "PostmanRuntime/7.26.10",
+          "Via": "1.1 d5488e7054c0eb6827749a115e047e78.cloudfront.net (CloudFront)",
+          "X-Amz-Cf-Id": "4HzCafouRCqtKbqALlglafGjSu6iP79qlJBKmzRbpShDENGzS2p04A==",
+          "X-Amzn-Trace-Id": "Root=1-604e04b4-5a715a2e605f839b27237ebf",
+          "X-Forwarded-For": "179.209.140.251, 130.176.40.71",
+          "X-Forwarded-Port": "443",
+          "X-Forwarded-Proto": "https"
+      },
+      "multiValueHeaders": {
+          "Accept": [
+              "*/*"
+          ],
+          "Accept-Encoding": [
+              "gzip, deflate, br"
+          ],
+          "Authorization": [
+              "Bearer eyJraWQiOiJQb2ZpVUo1XC9DdWZkemdqblpwZHlcLzNZbktDaW5FMjBoUlprdEpac3lkS2c9IiwiYWxnIjoiUlMyNTYifQ.eyJzdWIiOiIxNTEwZGE5YS0yNTk3LTQ1Y2MtODQ4ZC1jODcwNGFlYzUxYjAiLCJhdWQiOiI1djlxcjRtZWpjZGZoNWJvcGtwZjgzaGxnZyIsImVtYWlsX3ZlcmlmaWVkIjp0cnVlLCJldmVudF9pZCI6IjYwNjYxZTU5LWNjYTYtNGZjYy04MWMwLTAwMjI5MDkwNzcxMiIsInRva2VuX3VzZSI6ImlkIiwiYXV0aF90aW1lIjoxNjE1NzIxODI2LCJwcm9maWxlIjoibG9kLWFkbWluIiwiaXNzIjoiaHR0cHM6XC9cL2NvZ25pdG8taWRwLnVzLWVhc3QtMS5hbWF6b25hd3MuY29tXC91cy1lYXN0LTFfRm9EMm8wcm96IiwiY29nbml0bzp1c2VybmFtZSI6ImxvZCIsImV4cCI6MTYxNTcyNTQyNiwiaWF0IjoxNjE1NzIxODI2LCJlbWFpbCI6ImxvZEBsb2QuY29tLnZjIn0.Qa2SzgCtgyD0Fc_95fJLFdLEsxg6OCgs8L8OQnroSWTkc7Kdsd-irhnhfndif30O4GK59m0DUIjCcyyIOR1AgRjhJybWErZkrlYkRxTITl0Cj8TmuhI_dTDHAIm_AZUO6A4BlXxBF3SwlFE3aLmb93CBM5yyR5LEvU-yDkCO4CnAoQzRmUlsKZQxIT2HTHdWnLYrhV_UCcq_pYoiQnGdOTbSMA_B4PLAxwXC8p_qod6Zaajvh63fANvjTp981tgniVAh9yYZONu5H8kbbxfnlg8xse8eXzFiL82YjYaJFcR11ztTbJIK4BhPKnQv0g3LPhxJpoD_MEC8Rax7RyAtTQ"
+          ],
+          "Cache-Control": [
+              "no-cache"
+          ],
+          "CloudFront-Forwarded-Proto": [
+              "https"
+          ],
+          "CloudFront-Is-Desktop-Viewer": [
+              "true"
+          ],
+          "CloudFront-Is-Mobile-Viewer": [
+              "false"
+          ],
+          "CloudFront-Is-SmartTV-Viewer": [
+              "false"
+          ],
+          "CloudFront-Is-Tablet-Viewer": [
+              "false"
+          ],
+          "CloudFront-Viewer-Country": [
+              "BR"
+          ],
+          "Host": [
+              "5jwpfv4bl2.execute-api.us-east-1.amazonaws.com"
+          ],
+          "Postman-Token": [
+              "1067f070-deff-4198-bbf9-b0da679f2657"
+          ],
+          "User-Agent": [
+              "PostmanRuntime/7.26.10"
+          ],
+          "Via": [
+              "1.1 d5488e7054c0eb6827749a115e047e78.cloudfront.net (CloudFront)"
+          ],
+          "X-Amz-Cf-Id": [
+              "4HzCafouRCqtKbqALlglafGjSu6iP79qlJBKmzRbpShDENGzS2p04A=="
+          ],
+          "X-Amzn-Trace-Id": [
+              "Root=1-604e04b4-5a715a2e605f839b27237ebf"
+          ],
+          "X-Forwarded-For": [
+              "179.209.140.251, 130.176.40.71"
+          ],
+          "X-Forwarded-Port": [
+              "443"
+          ],
+          "X-Forwarded-Proto": [
+              "https"
+          ]
+      },
+      "queryStringParameters": null,
+      "multiValueQueryStringParameters": null,
+      "pathParameters": {
+          "proxy": "vigor"
+      },
+      "stageVariables": null,
+      "requestContext": {
+          "resourceId": "g972nq",
+          "resourcePath": "/companies/{proxy+}",
+          "httpMethod": "GET",
+          "extendedRequestId": "cLWsKFGvoAMFxOw=",
+          "requestTime": "14/Mar/2021:12:42:28 +0000",
+          "path": "/main/companies/vigor",
+          "accountId": "918638571272",
+          "protocol": "HTTP/1.1",
+          "stage": "main",
+          "domainPrefix": "5jwpfv4bl2",
+          "requestTimeEpoch": 1615725748106,
+          "requestId": "ae0c216c-83ea-44bf-9d4b-a056144f8f31",
+          "identity": {
+              "cognitoIdentityPoolId": null,
+              "accountId": null,
+              "cognitoIdentityId": null,
+              "caller": null,
+              "sourceIp": "179.209.140.251",
+              "principalOrgId": null,
+              "accessKey": null,
+              "cognitoAuthenticationType": null,
+              "cognitoAuthenticationProvider": null,
+              "userArn": null,
+              "userAgent": "PostmanRuntime/7.26.10",
+              "user": null
+          },
+          "domainName": "5jwpfv4bl2.execute-api.us-east-1.amazonaws.com",
+          "apiId": "5jwpfv4bl2"
+      },
+      "body": null,
+      "isBase64Encoded": false
+  },
+  "ctx": {
+      "callbackWaitsForEmptyEventLoop": true,
+      "functionVersion": "$LATEST",
+      "functionName": "lodCompaniesApiFun-main",
+      "memoryLimitInMB": "128",
+      "logGroupName": "/aws/lambda/lodCompaniesApiFun-main",
+      "logStreamName": "2021/03/14/[$LATEST]f2f770cb879b4b98b13b1f04775fc403",
+      "invokedFunctionArn": "arn:aws:lambda:us-east-1:918638571272:function:lodCompaniesApiFun-main",
+      "awsRequestId": "0045b5df-8783-4e78-a175-71cdc6492425"
+  }
+}

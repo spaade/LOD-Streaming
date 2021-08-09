@@ -1,0 +1,569 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="ngb.alert.close" datatype="html">
+        <source>Close</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/alert/alert.ts</context>
+          <context context-type="linenumber">58,61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.slide-number" datatype="html">
+        <source> Slide <x id="INTERPOLATION" equiv-text="private _pauseO"/> of <x id="INTERPOLATION_1" equiv-text="Subject(false);"/> </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/carousel/carousel.ts</context>
+          <context context-type="linenumber">114,118</context>
+        </context-group>
+        <note priority="1" from="description">Currently selected slide number read by screen reader</note>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.previous" datatype="html">
+        <source>Previous</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/carousel/carousel.ts</context>
+          <context context-type="linenumber">132,133</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.carousel.next" datatype="html">
+        <source>Next</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/carousel/carousel.ts</context>
+          <context context-type="linenumber">147,151</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.select-month" datatype="html">
+        <source>Select month</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/datepicker/datepicker-navigation-select.ts</context>
+          <context context-type="linenumber">43,47</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/datepicker/datepicker-navigation-select.ts</context>
+          <context context-type="linenumber">49,50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.select-year" datatype="html">
+        <source>Select year</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/datepicker/datepicker-navigation-select.ts</context>
+          <context context-type="linenumber">59,63</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/datepicker/datepicker-navigation-select.ts</context>
+          <context context-type="linenumber">72,74</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.previous-month" datatype="html">
+        <source>Previous month</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/datepicker/datepicker-navigation.ts</context>
+          <context context-type="linenumber">24,27</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/datepicker/datepicker-navigation.ts</context>
+          <context context-type="linenumber">34,35</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.datepicker.next-month" datatype="html">
+        <source>Next month</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/datepicker/datepicker-navigation.ts</context>
+          <context context-type="linenumber">44,48</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/datepicker/datepicker-navigation.ts</context>
+          <context context-type="linenumber">57,61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.first" datatype="html">
+        <source>««</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">147,148</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.previous" datatype="html">
+        <source>«</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">153,154</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.next" datatype="html">
+        <source>»</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">158,159</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.last" datatype="html">
+        <source>»»</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">164,165</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.first-aria" datatype="html">
+        <source>First</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">168,172</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.previous-aria" datatype="html">
+        <source>Previous</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">176,177</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.next-aria" datatype="html">
+        <source>Next</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">188,189</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.pagination.last-aria" datatype="html">
+        <source>Last</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/pagination/pagination.ts</context>
+          <context context-type="linenumber">195,200</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.progressbar.value" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="turn this._max;"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/progressbar/progressbar.ts</context>
+          <context context-type="linenumber">31,38</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.HH" datatype="html">
+        <source>HH</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">40,41</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.hours" datatype="html">
+        <source>Hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">45,46</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.MM" datatype="html">
+        <source>MM</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">52,53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.minutes" datatype="html">
+        <source>Minutes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">57,58</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-hours" datatype="html">
+        <source>Increment hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">62,63</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-hours" datatype="html">
+        <source>Decrement hours</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">67,68</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-minutes" datatype="html">
+        <source>Increment minutes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">75,76</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-minutes" datatype="html">
+        <source>Decrement minutes</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.SS" datatype="html">
+        <source>SS</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">85,87</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.seconds" datatype="html">
+        <source>Seconds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">90,92</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.increment-seconds" datatype="html">
+        <source>Increment seconds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">98,99</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.decrement-seconds" datatype="html">
+        <source>Decrement seconds</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">105,109</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.AM" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="Step: number;
+
+"/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">116,123</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.timepicker.PM" datatype="html">
+        <source><x id="INTERPOLATION" equiv-text="sible.
+   */
+  "/></source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/timepicker/timepicker.ts</context>
+          <context context-type="linenumber">125,130</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="ngb.toast.close-aria" datatype="html">
+        <source>Close</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">node_modules/@ng-bootstrap/ng-bootstrap/src/toast/toast.ts</context>
+          <context context-type="linenumber">76,85</context>
+        </context-group>
+      </trans-unit>
+
+      <trans-unit id="36707406387411084" datatype="html">
+        <source> Ola <x id="INTERPOLATION" equiv-text=" {{ appAuth.user.username | firstName }"/> </source>
+        <target> Hola <x id="INTERPOLATION" equiv-text=" {{ appAuth.user.username | firstName }"/> </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/app-dashboard.component.html</context>
+          <context context-type="linenumber">13,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6457184152962782239" datatype="html">
+        <source>   logout </source>
+        <target> cerrar sesión</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/app-dashboard.component.html</context>
+          <context context-type="linenumber">25,27</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3298508944470573243" datatype="html">
+        <source><x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon [icon]=&quot;[&apos;fas&apos;, &apos;spinner&apos;]&quot; [spin]=&quot;true&quot; style=&quot;font-size: 2em;&quot;&gt;"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;
+    "/> Carregando, por favor aguarde... </source>
+        <target><x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon [icon]=&quot;[&apos;fas&apos;, &apos;spinner&apos;]&quot; [spin]=&quot;true&quot; style=&quot;font-size: 2em;&quot;&gt;"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon&gt;"/><x id="LINE_BREAK" ctype="lb" equiv-text="&lt;br&gt;
+    "/> Cargando por favor espere ... </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/app-dashboard.component.html</context>
+          <context context-type="linenumber">41,45</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/app-empresas.component.html</context>
+          <context context-type="linenumber">7,11</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1957676255721041504" datatype="html">
+        <source><x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon [icon]=&quot;[&apos;fas&apos;, &apos;exclamation-circle&apos;]&quot; style=&quot;font-size: 1em;&quot;&gt;"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon&gt;
+            "/> Antes de prosseguir, é necessário revisar os termos: </source>
+        <target><x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon [icon]=&quot;[&apos;fas&apos;, &apos;exclamation-circle&apos;]&quot; style=&quot;font-size: 1em;&quot;&gt;"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon&gt;
+            "/> Antes de continuar, es necesario revisar los términos: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/app-dashboard.component.html</context>
+          <context context-type="linenumber">59,62</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/evento/app-emp-evento.component.html</context>
+          <context context-type="linenumber">79,82</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="958253193187709090" datatype="html">
+        <source> Concordar e Continuar <x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon [icon]=&quot;[&apos;fas&apos;, &apos;arrow-circle-right&apos;]&quot;&gt;"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon&gt;"/></source>
+        <target> Aceptar y continuar <x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon [icon]=&quot;[&apos;fas&apos;, &apos;arrow-circle-right&apos;]&quot;&gt;"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/app-dashboard.component.html</context>
+          <context context-type="linenumber">86</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/evento/app-emp-evento.component.html</context>
+          <context context-type="linenumber">106</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8961073001251406427" datatype="html">
+        <source> Por favor Aguarde... </source>
+        <target> Espere por favor... </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/app-dashboard.component.html</context>
+          <context context-type="linenumber">89,90</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/evento/app-emp-evento.component.html</context>
+          <context context-type="linenumber">109,110</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="186558083495260846" datatype="html">
+        <source> Sem mensagens... </source>
+        <target> Ningún mensaje ... </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/app-dashboard.component.html</context>
+          <context context-type="linenumber">124,126</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/evento/chat/chat.component.html</context>
+          <context context-type="linenumber">7,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="952165179723398566" datatype="html">
+        <source> Falar: </source>
+        <target> Hablar: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/app-dashboard.component.html</context>
+          <context context-type="linenumber">167,168</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/evento/chat/chat.component.html</context>
+          <context context-type="linenumber">51,52</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4276611546397740999" datatype="html">
+        <source> Enviar <x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon [icon]=&quot;[&apos;fas&apos;, &apos;chevron-right&apos;]&quot;&gt;"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon&gt;"/></source>
+        <target> Entregar <x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon [icon]=&quot;[&apos;fas&apos;, &apos;chevron-right&apos;]&quot;&gt;"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon&gt;"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/dashboard/app-dashboard.component.html</context>
+          <context context-type="linenumber">185,186</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/evento/chat/chat.component.html</context>
+          <context context-type="linenumber">68,69</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="6222151971519973614" datatype="html">
+        <source> Faça o seu cadastro </source>
+        <target> Haz tu registro </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/auto-cadastro/app-emp-auto-cadastro.component.html</context>
+          <context context-type="linenumber">13,14</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5274129145758680830" datatype="html">
+        <source> Cadastro realizado com sucesso! </source>
+        <target> ¡Registro exitoso! </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/auto-cadastro/app-emp-auto-cadastro.component.html</context>
+          <context context-type="linenumber">23,24</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7913269457090170742" datatype="html">
+        <source> Você pode prosseguir para o </source>
+        <target> Puede proceder al </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/auto-cadastro/app-emp-auto-cadastro.component.html</context>
+          <context context-type="linenumber">27,28</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="845041155954588585" datatype="html">
+        <source> Nome </source>
+        <target> Nombre </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/auto-cadastro/app-emp-auto-cadastro.component.html</context>
+          <context context-type="linenumber">44,45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5604494660833373532" datatype="html">
+        <source> Campo obrigatório. </source>
+        <target> Campo obligatorio. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/auto-cadastro/app-emp-auto-cadastro.component.html</context>
+          <context context-type="linenumber">66,67</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/auto-cadastro/app-emp-auto-cadastro.component.html</context>
+          <context context-type="linenumber">101,102</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/auto-cadastro/app-emp-auto-cadastro.component.html</context>
+          <context context-type="linenumber">139,140</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/auto-cadastro/app-emp-auto-cadastro.component.html</context>
+          <context context-type="linenumber">181,182</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/auto-cadastro/app-emp-auto-cadastro.component.html</context>
+          <context context-type="linenumber">224,225</context>
+        </context-group>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/auto-cadastro/app-emp-auto-cadastro.component.html</context>
+          <context context-type="linenumber">295,296</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="8556583421226959879" datatype="html">
+        <source> Email inválido. </source>
+        <target> Email inválido. </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/auto-cadastro/app-emp-auto-cadastro.component.html</context>
+          <context context-type="linenumber">104,105</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7455586855050097614" datatype="html">
+        <source> Senha: </source>
+        <target> Contraseña: </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/auto-cadastro/app-emp-auto-cadastro.component.html</context>
+          <context context-type="linenumber">117,118</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="643482661284680248" datatype="html">
+        <source> Nome do Estabelecimento </source>
+        <target> Nombre del establecimiento </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/auto-cadastro/app-emp-auto-cadastro.component.html</context>
+          <context context-type="linenumber">198,199</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5841721086880983668" datatype="html">
+        <source> Cargo (Opcional) </source>
+        <target> Posición (opcional) </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/auto-cadastro/app-emp-auto-cadastro.component.html</context>
+          <context context-type="linenumber">241,242</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="388448973085385366" datatype="html">
+        <source> Telefone </source>
+        <target> Teléfono </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/auto-cadastro/app-emp-auto-cadastro.component.html</context>
+          <context context-type="linenumber">269,270</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="9144653047894185193" datatype="html">
+        <source> Realizar Cadastro </source>
+        <target> Hacer registro </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/auto-cadastro/app-emp-auto-cadastro.component.html</context>
+          <context context-type="linenumber">346,347</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1559261264520829230" datatype="html">
+        <source><x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon
+                    [icon]=&quot;[&apos;fas&apos;, &apos;spinner&apos;]&quot;
+                    [spin]=&quot;true&quot;
+                  &gt;"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon&gt;
+                  "/> Aguarde... </source>
+        <target><x id="START_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;fa-icon
+                    [icon]=&quot;[&apos;fas&apos;, &apos;spinner&apos;]&quot;
+                    [spin]=&quot;true&quot;
+                  &gt;"/><x id="CLOSE_TAG_FA_ICON" ctype="x-fa_icon" equiv-text="&lt;/fa-icon&gt;
+                  "/> Esperar... </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/auto-cadastro/app-emp-auto-cadastro.component.html</context>
+          <context context-type="linenumber">353,359</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3892033703228658597" datatype="html">
+        <source> Já tem cadastro? </source>
+        <target> ¿Ya registrado? </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/auto-cadastro/app-emp-auto-cadastro.component.html</context>
+          <context context-type="linenumber">364,365</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4176511096797922261" datatype="html">
+        <source> Faça login aqui </source>
+        <target> Entre aquí </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/auto-cadastro/app-emp-auto-cadastro.component.html</context>
+          <context context-type="linenumber">371,372</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2077920316473158978" datatype="html">
+        <source> Início do evento: <x id="INTERPOLATION" equiv-text=" {{ event.startDate | date:&apos;long&apos; }"/> </source>
+        <target> Inicio del evento: <x id="INTERPOLATION" equiv-text=" {{ event.startDate | date:&apos;long&apos; }"/> </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/evento/app-emp-evento.component.html</context>
+          <context context-type="linenumber">136,138</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2694393162632390730" datatype="html">
+        <source> Em <x id="INTERPOLATION" equiv-text=" {{ timeToEvent }"/> </source>
+        <target> En <x id="INTERPOLATION" equiv-text=" {{ timeToEvent }"/> </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/evento/app-emp-evento.component.html</context>
+          <context context-type="linenumber">140,142</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1507843935396824360" datatype="html">
+        <source> Evento finalizado em <x id="INTERPOLATION" equiv-text=" {{ event.endDate | date:&apos;long&apos; }"/> </source>
+        <target> El evento terminó el <x id="INTERPOLATION" equiv-text=" {{ event.endDate | date:&apos;long&apos; }"/> </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/evento/app-emp-evento.component.html</context>
+          <context context-type="linenumber">146,148</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7776503170699723002" datatype="html">
+        <source>Voltar</source>
+        <target>Volver</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/evento/app-emp-evento.component.html</context>
+          <context context-type="linenumber">151</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2334387123552928026" datatype="html">
+        <source>Saudações da <x id="INTERPOLATION" equiv-text="{{ company.companyName | capitalize }}"/>!</source>
+        <target>Saludos desde </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/home/app-emp-home.component.html</context>
+          <context context-type="linenumber">30</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3108336818179756262" datatype="html">
+        <source>Confira os eventos abaixo:</source>
+        <target>Mira los eventos a continuación:</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/home/app-emp-home.component.html</context>
+          <context context-type="linenumber">32</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="1671617524039809673" datatype="html">
+        <source>Nenhum evento econtrado no momento.</source>
+        <target>No se han encontrado eventos en este momento.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/home/app-emp-home.component.html</context>
+          <context context-type="linenumber">40</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3182562458509247859" datatype="html">
+        <source> Data de início: <x id="INTERPOLATION" equiv-text=" {{ event.startDate | date:&apos;long&apos; }"/> </source>
+        <target> Fecha de inicio: <x id="INTERPOLATION" equiv-text=" {{ event.startDate | date:&apos;long&apos; }"/> </target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/home/app-emp-home.component.html</context>
+          <context context-type="linenumber">59,61</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="4259419656385066864" datatype="html">
+        <source> Data de conclusão: <x id="INTERPOLATION" equiv-text=" {{ event.endDate | date:&apos;long&apos; }"/> </source>
+        <target> Fecha de finalizacion: <x id="INTERPOLATION" equiv-text=" {{ event.endDate | date:&apos;long&apos; }"/></target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/empresas/home/app-emp-home.component.html</context>
+          <context context-type="linenumber">63,65</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

@@ -1,0 +1,7 @@
+{
+    "tableName": "lodEvents",
+    "partitionKeyName": "companyId",
+    "partitionKeyType": "S",
+    "sortKeyName": "id",
+    "sortKeyType": "S"
+}

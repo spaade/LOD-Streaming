@@ -1,0 +1,222 @@
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light p-l-0">
+  <div class="container-fluid">
+
+    <button
+      class="btn {{ flagShowingLeftPanel ? 'btn-light' : 'btn-dark' }}"
+      style="margin-right: 1em"
+      (click)="toggleLeftPanel()"
+    >
+      <fa-icon [icon]="['fas', 'bars']"></fa-icon>
+    </button>
+
+    <label id="lblUsuario" style="padding-top: 0.5em;" i18n>
+      Olá {{ appAuth.user.username | firstName }}
+    </label>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <form class="" style="position:absolute; top:0.6em;right:1em">
+
+        <a [href]="routePrefix + '/logout'" class="btn btn-secondary">
+
+          <fa-icon icon="user"></fa-icon>
+          <span i18n>
+            &nbsp;
+            logout
+          </span>
+        </a>
+
+    </form>
+    </div>
+  </div>
+</nav>
+
+<div
+  class="row no-gutters panel-loading-msg  page-loading-{{ flagPageLoading }}"
+>
+  <div class="col txt-center" i18n>
+
+    <!--i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i-->
+    <fa-icon [icon]="['fas', 'spinner']" [spin]="true" style="font-size: 2em;"></fa-icon>
+    <br>
+    Carregando, por favor aguarde...
+
+  </div>
+</div>
+
+<div
+  class="row no-gutters panel-agreement showing-agreement-{{ flagShowingAgreement }}"
+>
+  <div class="col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-sm-12 txt-center" style="padding-top: 30px">
+
+    <div class="card">
+      <div class="card-body">
+
+        <div class="row">
+          <div class="col p-b-10" i18n>
+
+            <fa-icon [icon]="['fas', 'exclamation-circle']" style="font-size: 1em;"></fa-icon>
+            Antes de prosseguir, é necessário revisar os termos:
+
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col" style="height: 24em">
+
+            <iframe
+              id="agreementContent"
+              src=""
+              style="width: 100%; height: 100%; border: 1px solid #6666"
+            ></iframe>
+
+          </div>
+        </div>
+        <div class="row">
+          <div class="col text-center p-t-20">
+
+            <button
+              class="btn btn-secondary"
+              [disabled]="flagPostingAgreement"
+              (click)="postAgreement()"
+            >
+
+              <span *ngIf="!flagPostingAgreement" i18n>
+                Concordar e Continuar <fa-icon [icon]="['fas', 'arrow-circle-right']"></fa-icon>
+              </span>
+              <span *ngIf="flagPostingAgreement" i18n>
+                Por favor Aguarde...
+              </span>
+            </button>
+
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<div class="container-fluid">
+
+  <div
+    class="row"
+    style="position:relative; height:75%; padding-top: 15px;"
+    *ngIf="!flagPageLoading && !flagShowingAgreement"
+  >
+    <div class="col show-left-panel-{{ flagShowingLeftPanel }}">
+
+      <div class="row">
+        <div class="col-6 left-panel">
+
+          <div class="row">
+            <div class="col card chat-card shadow" style="border: 1px solid rgba(0, 0, 0, 0.2)">
+
+              <h2>Chat</h2>
+
+              <div class="row">
+                <div id="panelChat" class="col">
+
+                  <div class="no-msg" *ngIf="flagChatLoaded && !chatHasMessages" i18n>
+
+                    Sem mensagens...
+
+                  </div>
+                  <div class="no-msg" *ngIf="!flagChatLoaded">
+
+                    <fa-icon [icon]="['fas', 'spinner']" [spin]="true" style="font-size: 1.8em;"></fa-icon>
+
+                  </div>
+                  <div *ngIf="chatHasMessages">
+
+                    <div
+                      class="panel-chat-msg is-logged-user-{{ msg.isLoggedUser }} is-admin-{{ msg.isAdmin }} msg-{{ msg.id }}"
+                      *ngFor="let msg of chatMessages"
+                    >
+                      <div class="msg-body" [innerHTML]="msg.text">
+
+                      </div>
+                      <div class="msg-meta">
+                        <span
+                          class="msg-author"
+                          *ngIf="!msg.isLoggedUser"
+                        >
+                          {{ msg.userAlias }} &nbsp;|
+                        </span>
+                        <span class="msg-date">
+                          <small>{{ msg.msgDate | date:'shortTime' }}</small>
+                        </span>
+                      </div>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+
+                  <div class="form-group">
+                    <label
+                      for="txtPostChat"
+                      style="padding: 1em 0em 0em 0em; font-size: 0.7em;"
+                      i18n
+                    >
+                      Falar:
+                    </label>
+                    <textarea
+                      class="form-control"
+                      id="txtPostChat"
+                      style="min-height: 4em; font-size: 0.9em;"
+                    ></textarea>
+                  </div>
+                  <div class="form-group text-right">
+
+                    <button
+                      class="btn btn-secondary btn-sm"
+                      (click)="postChat()"
+                      [disabled]="flagPostingChat"
+                      style="min-height: 25px;"
+                    >
+
+                      <span *ngIf="!flagPostingChat" i18n>
+                        Enviar
+                        <fa-icon [icon]="['fas', 'chevron-right']"></fa-icon>
+                      </span>
+
+                      <span *ngIf="flagPostingChat && postingChatDelay > 0">
+                        <small>{{ postingChatDelay }}</small>
+                      </span>
+
+                    </button>
+
+                  </div>
+
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+        <div class="col right-panel" style="max-height: 42em;">
+
+          <iframe
+            id="vimeoFrame"
+            src="https://vimeo.com/event/888955/embed/a7766da081"
+            frameborder="0"
+            allow="autoplay; fullscreen; picture-in-picture"
+            allowfullscreen
+            style="position:absolute;top:0px;left:0;width:100%;height:100%;"
+          ></iframe>
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+</div>

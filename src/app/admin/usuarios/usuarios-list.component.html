@@ -1,0 +1,55 @@
+<div class="row p-l-20 p-r-20">
+  <div class="col loading-{{ flagLoadingData }}">
+
+    <div class="loading text-center">
+
+      <fa-icon
+        [icon]="['fas', 'spinner']"
+        [spin]="true"
+        style="font-size: 2em;">
+      </fa-icon>
+
+    </div>
+
+    <div class="row loaded-content" *ngIf="!flagLoadingData">
+      <div class="col p-t-20">
+
+        <h2 class="txt-lg">
+          Usuários Cadastrados
+        </h2>
+        <table class="table shadow-sm table-sm table-bordered table-hover list">
+          <thead class="thead-dark">
+          <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Usuário Login</th>
+            <th scope="col">Cargo</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let companyUser of companyUsers">
+            <th scope="row">
+              <a
+                href="javascript:;"
+                routerLink="/admin/usuarios/{{ companyUser.userId }}"
+              >
+                <fa-icon [icon]="['fas', 'edit']" style="font-size: 0.8em;"></fa-icon>
+                {{ companyUser.name }}
+              </a>
+
+            </th>
+            <td>
+              {{ !companyUser.companyUserName || companyUser.companyUserName == '' ? '(vazio)' : companyUser.companyUserName }}
+            </td>
+            <td>
+              {{ !companyUser.companyRole || companyUser.companyRole == '' ? '(vazio)' : companyUser.companyRole }}
+            </td>
+
+          </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+  </div>
+</div>

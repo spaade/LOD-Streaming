@@ -1,0 +1,38 @@
+<div class="row no-gutters admin-container">
+  <div class="col col-3 panel">
+
+    <div class="row">
+      <div class="col p-t-20 text-center">
+
+        <button
+          class="btn btn-secondary"
+          routerLink="/admin/clientes"
+          style="width:50%"
+        >
+          Listagem
+        </button>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col p-t-20 text-center">
+
+        <button
+          class="btn btn-primary"
+          style="width:50%"
+          routerLink="/admin/clientes/novo"
+        >
+          Incluir Novo
+        </button>
+
+      </div>
+    </div>
+
+  </div>
+
+  <div class="col col-9 panel">
+
+    <router-outlet></router-outlet>
+
+  </div>
+</div>

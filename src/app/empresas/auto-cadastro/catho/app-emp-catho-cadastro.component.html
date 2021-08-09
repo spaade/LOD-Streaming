@@ -1,0 +1,277 @@
+
+<div id="catho-cadastro">
+  <nav id="catho-nav" class="nav-catho txt-center">
+    <div class="container">
+
+      <a class="navbar-brand m-r-30" href="#">
+        <img src="/assets/clientes/catho/hr01-header-logo.png" alt="Catho">
+      </a>
+      <a class="navbar-item m-r-30" href="#">
+        <img src="/assets/clientes/catho/hr01-header-evento.png" alt="Evento">
+      </a>
+      <a class="navbar-item m-r-30" href="#">
+        <img src="/assets/clientes/catho/hr01-header-palestrantes.png" alt="Palestrantes">
+      </a>
+      <a class="navbar-item m-r-30" href="#">
+        <img src="/assets/clientes/catho/hr01-header-agenda.png" alt="Agenda">
+      </a>
+      <a class="navbar-item m-r-30" href="#">
+        <img src="/assets/clientes/catho/hr01-header-apoiadores.png" alt="Apoiadores">
+      </a>
+
+    </div>
+  </nav>
+
+  <div class="row">
+    <div class="col-6 offset-6">
+      
+      <div class="row">
+        <div class="col" style="padding: 150px 0px 40px 15px">
+
+          <img src="/assets/clientes/catho/hr01-texto-facaja.png" alt="Faça já sua inscrição!">
+
+        </div>
+      </div>
+
+      <form (submit)="sendForm()" [formGroup]="cadastroForm">
+
+        <div class="form-group row">
+          <label class="col-9">
+            <input
+              placeholder="Nome"
+              class="form-control"
+              formControlName="name"
+              id="txtAcName"
+              type="text"
+              required
+            />
+          </label>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-9">
+            <input
+              placeholder="Sobrenome"
+              class="form-control"
+              formControlName="surname"
+              id="txtAcSurname"
+              type="text"
+              required
+            />
+          </label>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-9">
+            <input
+              placeholder="Email Corporativo"
+              class="form-control"
+              formControlName="email"
+              id="txtAcEmail"
+              type="text"
+              required
+            />
+          </label>
+        </div>
+
+        <div class="form-group row">
+          <label class="label col-4 text-right" for="txtAcPhoneNumber">
+            <img
+              src="/assets/clientes/catho/hr01-form-texto-telefone.png"
+              alt="Telefone Celular"
+              style="margin-top: 8px;"
+            >
+          </label>
+          <div class="col-5">
+            <input
+              class="form-control"
+              formControlName="phoneNumber"
+              id="txtAcPhoneNumber"
+              type="text"
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="col-9">
+            <input
+              placeholder="Empresa"
+              class="form-control"
+              formControlName="company"
+              id="txtAcCompany"
+              type="text"
+            />
+          </label>
+        </div>
+
+        <div class="form-group row">
+          <label class="label col-2 text-right p-r-0" for="txtAcCompanyRole">
+
+            <img
+              src="/assets/clientes/catho/hr01-form-texto-cargo.png"
+              alt="Cargo"
+              style="margin-top: 9px; margin-bottom: -2px;"
+            >
+
+          </label>
+          <div class="col-7">
+            <input
+              class="form-control"
+              formControlName="companyRole"
+              id="txtAcCompanyRole"
+              type="text"
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="label col-4 text-right p-r-0" for="txtAcActiveRole">
+            <img
+              src="/assets/clientes/catho/hr01-form-texto-area.png"
+              alt="Área de Atuação"
+              style="margin-top: 8px;"
+            >
+          </label>
+          <div class="col-5">
+            <input
+              class="form-control"
+              formControlName="activeRole"
+              id="txtAcActiveRole"
+              type="text"
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <label class="label col-5 text-right p-r-0" for="txtAcCompanyTotalEmployees">
+            
+            <img
+              src="/assets/clientes/catho/hr01-form-texto-numero.png"
+              alt="Número de Funcionários"
+              style="margin-top: 9px;"
+            >
+          </label>
+          <div class="col-4">
+            <input
+              class="form-control"
+              formControlName="totalEmployees"
+              id="txtAcCompanyTotalEmployees"
+              type="text"
+            />
+          </div>
+        </div>
+
+        <div class="form-group row">
+          <div class="col-6 p-t-30 p-b-30 p-l-0">
+
+            <div class="row no-gutters">
+              <div class="col">
+                
+                <input
+                  formControlName="agreeWithFirstTerm"
+                  id="txtAgreeWithFirstTerm"
+                  name="txtAgreeWithFirstTerm"
+                  type="checkbox"
+                  style="margin:5px; font-size: 1.4em;"
+                >
+                <label class="form-check-label" for="txtAgreeWithFirstTerm">
+                  <img src="/assets/clientes/catho/hr01-form-texto-concordo-1.png" alt="Enviar">
+                </label>
+
+              </div>
+            </div>
+            <div class="row no-gutters">
+              <div class="col">
+
+                <input
+                  formControlName="agreeWithSecondTerm"
+                  id="txtAgreeWithSecondTerm"
+                  name="txtAgreeWithSecondTerm"
+                  type="checkbox"
+                  style="margin:5px; font-size: 1.4em;"
+                >
+                <label class="form-check-label" for="txtAgreeWithSecondTerm">
+                  <img src="/assets/clientes/catho/hr01-form-texto-concordo-2.png" alt="Enviar">
+                </label>
+
+              </div>
+            </div>
+
+          </div>
+          <div class="col-4 txt-left p-t-20" style="margin-left: -30px;">
+
+            <button
+              type="submit"
+              style="border: 0; background: transparent"
+              [disabled]="!flagSavingData"
+            >
+              <img
+                src="/assets/clientes/catho/hr01-botao-enviar.png"
+                alt="Enviar"
+                *ngIf="!flagSavingData"
+              >
+              
+              <fa-icon
+                *ngIf="flagSavingData"
+                [icon]="['fas', 'spinner']"
+                [spin]="true"
+              ></fa-icon>
+              
+            </button>
+
+          </div>
+        </div>
+
+      </form>
+
+    </div>
+  </div>
+
+  <footer id="catho-footer">
+    <div class="container">
+      <div class="parent">
+        <div class="div1">
+          <img src="/assets/clientes/catho/hr01-logo-rodape.jpg" alt="Logo Rodapé">
+        </div>
+        <div class="div2">
+          <img src="/assets/clientes/catho/hr01-rodape-data.jpg" alt="Data do Evento">
+        </div>
+        <div class="div3 m-l-20">
+          <div class="container">
+            <div class="row m-b-30">
+              <img src="/assets/clientes/catho/hr01-rodape-duvida.gif" alt="Data do Evento">
+            </div>
+            <div class="row">
+
+              <div class="container">
+                <span class="row m-b-10 text-white">SIGA-NOS EM NOSSAS REDES</span>
+                <a class="navbar-brand m-r-10" href="https://www.facebook.com/catho.com.br">
+                  <img src="/assets/clientes/catho/hr01-rodape-rs-facebook.jpg" alt="Facebook">
+                </a>
+                <a class="navbar-item m-r-10" href="https://www.linkedin.com/company/catho-online/?originalSubdomain=br">
+                  <img src="/assets/clientes/catho/hr01-rodape-rs-linkedin.jpg" alt="Linkedin">
+                </a>
+                <a class="navbar-item m-r-10" href="https://www.youtube.com/user/Cathonoticias">
+                  <img src="/assets/clientes/catho/hr01-rodape-rs-youtube.jpg" alt="Youtube">
+                </a>
+                <a class="navbar-item m-r-10" href="https://www.instagram.com/catho_oficial/?hl=pt-br">
+                  <img src="/assets/clientes/catho/hr01-rodape-rs-instagram.jpg" alt="Instagram">
+                </a>
+
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col txt-center p-b-30">
+
+        <img src="/assets/clientes/catho/hr01-rodape-copyright.gif" alt="Direitos Reservados">
+
+      </div>
+    </div>
+    
+  </footer>
+</div>

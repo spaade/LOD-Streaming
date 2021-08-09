@@ -1,0 +1,108 @@
+<div class="row" class="panel-event-home">
+  <div class="col-10 offset-1 p-b-30">
+
+    <div class="card shadow p-30">
+
+      <div
+        class="row no-gutters panel-loading-msg"
+        *ngIf="flagLoading"
+      >
+        <div class="col txt-center" style="padding:60px 0px">
+
+          <fa-icon
+            [icon]="['fas', 'spinner']"
+            [spin]="true"
+            style="font-size: 1.5em; color: rgba(0, 0, 0, 0.7)"
+          ></fa-icon>
+
+        </div>
+      </div>
+
+      <div
+        class="row"
+        *ngIf="!flagLoading"
+      >
+        <div class="col">
+
+          <div class="row">
+            <div class="col">
+
+              <h1 i18n>Saudações da {{ company.companyName | capitalize }}!</h1>
+
+              <p i18n>Confira os eventos abaixo:</p>
+
+            </div>
+          </div>
+
+          <div class="row" *ngIf="events.length == 0">
+            <div class="col nenhum-item">
+
+              <p i18n>Nenhum evento econtrado no momento.</p>
+
+            </div>
+          </div>
+
+          <div class="row" *ngIf="events.length > 0">
+            <div class="col">
+
+              <ul class="events-list">
+                <li *ngFor="let event of events">
+                  <h4>
+                    <a href="javascript:;" [routerLink]=" routePrefix + '/' + event.id ">
+                      {{ event.eventName }}
+                    </a>
+                  </h4>
+                  <p *ngIf="event.eventDescription != null && event.eventDescription != ''">
+                    {{ event.eventDescription }}
+                  </p>
+                  <p>
+                    <span i18n>
+                      Data de início: {{ event.startDate | date:'long' }}
+                    </span>
+                    <br>
+                    <span i18n>
+                      Data de conclusão: {{ event.endDate | date:'long' }}
+                    </span>
+                  </p>
+                  <div class="row" *ngFor="let stream of event.streams">
+                    <div class="col-12">
+
+                      <h6>
+                        Sessões:
+                      </h6>
+
+                    </div>
+                    <div class="col-12 p-l-30">
+
+                      <a href="javascript:;" [routerLink]=" routePrefix + '/' + event.id">
+                        {{ stream.streamName }}
+                      </a>
+                      <p>
+                        <span i18n>
+                          Disponível para visualização: {{ stream.enabledFromDate | date:'long' }}
+                        </span>
+                        <br>
+                        <span i18n>
+                          Início da sessão: {{ stream.runningFromDate | date:'long' }}
+                        </span>
+                        <br>
+                        <span i18n>
+                          Fim da sessão: {{ stream.runningToDate | date:'long' }}
+                        </span>
+                      </p>
+
+                    </div>
+                  </div>
+                </li>
+              </ul>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+</div>

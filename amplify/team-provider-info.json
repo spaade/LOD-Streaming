@@ -1,0 +1,110 @@
+{
+  "prod": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-lodio-prod-103612-authRole",
+      "UnauthRoleArn": "arn:aws:iam::918638571272:role/amplify-lodio-prod-103612-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::918638571272:role/amplify-lodio-prod-103612-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-lodio-prod-103612-deployment",
+      "UnauthRoleName": "amplify-lodio-prod-103612-unauthRole",
+      "StackName": "amplify-lodio-prod-103612",
+      "StackId": "arn:aws:cloudformation:us-east-1:918638571272:stack/amplify-lodio-prod-103612/e799bab0-87ee-11eb-9eb0-127c6c2d7f71",
+      "AmplifyAppId": "d25hulrrzxzn0x"
+    },
+    "categories": {
+      "auth": {
+        "lodioc89c2538": {}
+      },
+      "function": {
+        "lodUserAuthFun": {
+          "deploymentBucketName": "amplify-lodio-prod-103612-deployment",
+          "s3Key": "amplify-builds/lodUserAuthFun-6e47706a687944776330-build.zip"
+        },
+        "lodCompanyUsersApiFun": {
+          "deploymentBucketName": "amplify-lodio-prod-103612-deployment",
+          "s3Key": "amplify-builds/lodCompanyUsersApiFun-46496f77566368473475-build.zip"
+        },
+        "lodCompaniesApiFun": {
+          "deploymentBucketName": "amplify-lodio-prod-103612-deployment",
+          "s3Key": "amplify-builds/lodCompaniesApiFun-7374554e437950746c6a-build.zip"
+        },
+        "lodEventsApiFun": {
+          "deploymentBucketName": "amplify-lodio-prod-103612-deployment",
+          "s3Key": "amplify-builds/lodEventsApiFun-6d3952366e656b347055-build.zip"
+        },
+        "lodStreamsApiFun": {
+          "deploymentBucketName": "amplify-lodio-prod-103612-deployment",
+          "s3Key": "amplify-builds/lodStreamsApiFun-715a513663446e4c3174-build.zip"
+        },
+        "funLiveData": {
+          "deploymentBucketName": "amplify-lodio-prod-103612-deployment",
+          "s3Key": "amplify-builds/funLiveData-78734d52596b2b434c42-build.zip"
+        },
+        "lodStreamChatsApiFun": {
+          "deploymentBucketName": "amplify-lodio-prod-103612-deployment",
+          "s3Key": "amplify-builds/lodStreamChatsApiFun-3767333437497a6c4d6c-build.zip"
+        }
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d25hulrrzxzn0x",
+          "type": "manual"
+        }
+      }
+    }
+  },
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-lodio-dev-122401-authRole",
+      "UnauthRoleArn": "arn:aws:iam::918638571272:role/amplify-lodio-dev-122401-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::918638571272:role/amplify-lodio-dev-122401-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-lodio-dev-122401-deployment",
+      "UnauthRoleName": "amplify-lodio-dev-122401-unauthRole",
+      "StackName": "amplify-lodio-dev-122401",
+      "StackId": "arn:aws:cloudformation:us-east-1:918638571272:stack/amplify-lodio-dev-122401/f72dc660-87fd-11eb-84af-0a90b7832da7",
+      "AmplifyAppId": "d25hulrrzxzn0x"
+    },
+    "categories": {
+      "auth": {
+        "lodioc89c2538": {}
+      },
+      "function": {
+        "lodUserAuthFun": {
+          "deploymentBucketName": "amplify-lodio-dev-122401-deployment",
+          "s3Key": "amplify-builds/lodUserAuthFun-6e47706a687944776330-build.zip"
+        },
+        "lodCompanyUsersApiFun": {
+          "deploymentBucketName": "amplify-lodio-dev-122401-deployment",
+          "s3Key": "amplify-builds/lodCompanyUsersApiFun-46496f77566368473475-build.zip"
+        },
+        "lodCompaniesApiFun": {
+          "deploymentBucketName": "amplify-lodio-dev-122401-deployment",
+          "s3Key": "amplify-builds/lodCompaniesApiFun-3839466565466c656e70-build.zip"
+        },
+        "lodEventsApiFun": {
+          "deploymentBucketName": "amplify-lodio-dev-122401-deployment",
+          "s3Key": "amplify-builds/lodEventsApiFun-4e686932634f31584869-build.zip"
+        },
+        "lodStreamsApiFun": {
+          "deploymentBucketName": "amplify-lodio-dev-122401-deployment",
+          "s3Key": "amplify-builds/lodStreamsApiFun-715a513663446e4c3174-build.zip"
+        },
+        "funLiveData": {
+          "deploymentBucketName": "amplify-lodio-dev-122401-deployment",
+          "s3Key": "amplify-builds/funLiveData-6f5842314b4967343873-build.zip"
+        },
+        "lodStreamChatsApiFun": {
+          "deploymentBucketName": "amplify-lodio-dev-122401-deployment",
+          "s3Key": "amplify-builds/lodStreamChatsApiFun-3767333437497a6c4d6c-build.zip"
+        }
+      },
+      "hosting": {
+        "amplifyhosting": {
+          "appId": "d25hulrrzxzn0x",
+          "type": "manual"
+        }
+      }
+    }
+  }
+}

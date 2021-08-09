@@ -1,0 +1,91 @@
+<nav class="navbar  navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+
+    <label id="lblUsuario" style="padding-top: 0.5em;">
+      Olá {{ appAuth.user.username | firstName }}
+    </label>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <!--ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+        </li>
+      </ul-->
+      <form class="" style="position:absolute; top:0.6em;right:1em">
+
+        <a [href]="routePrefix + '/logout'" class="btn btn-secondary">
+
+          <fa-icon icon="user"></fa-icon>
+          <span>
+            &nbsp;
+            logout
+          </span>
+        </a>
+        <!--
+        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success" type="submit">Search</button>
+
+      -->
+    </form>
+    </div>
+  </div>
+</nav>
+
+<div class="sub-nav enterprise">
+  <div class="row">
+    <div class="col">
+
+      <ul class="nav nav-pills">
+        <li class="nav-item">
+          <a class="nav-link " routerLinkActive="active" routerLink="clientes">
+            <fa-icon [icon]="['fas', 'city']"></fa-icon>
+            Clientes
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="usuarios">
+            <fa-icon [icon]="['fas', 'id-badge']"></fa-icon>
+            Usuários
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLinkActive="active" routerLink="eventos">
+            <fa-icon [icon]="['fas', 'users']"></fa-icon>
+            Eventos
+          </a>
+        </li>
+      </ul>
+
+    </div>
+    <div class="col view-{{ appUi.flagViewingMsg }}">
+
+      <div class="panel-usr-msg" (click)="appUi.closeMsg()">
+        {{ appUi.msg }}
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<app-select-company *ngIf="flagShowSelectedCompany"></app-select-company>
+
+<router-outlet></router-outlet>
+

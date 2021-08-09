@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/streamChats",
+            "lambdaFunction": "lodStreamChatsApiFun",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/streamChats"
+        }
+    ],
+    "resourceName": "lodStreamChatsApi",
+    "apiName": "lodStreamChatsApi",
+    "functionArns": [
+        {
+            "lambdaFunction": "lodStreamChatsApiFun"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-lodio-prod-103612-authRole",
+        "unAuthRoleName": "amplify-lodio-prod-103612-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "lodStreamChatsApiFun",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

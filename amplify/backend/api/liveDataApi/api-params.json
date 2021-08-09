@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/livedata",
+            "lambdaFunction": "funLiveData",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/livedata"
+        }
+    ],
+    "resourceName": "liveDataApi",
+    "apiName": "liveDataApi",
+    "functionArns": [
+        {
+            "lambdaFunction": "funLiveData"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-lodio-prod-103612-authRole",
+        "unAuthRoleName": "amplify-lodio-prod-103612-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "funLiveData",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}

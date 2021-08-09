@@ -1,0 +1,46 @@
+<div class="row p-l-20 p-r-20">
+  <div class="col loading-{{ flagLoadingData }}">
+
+    <div class="loading text-center">
+
+      <fa-icon
+        [icon]="['fas', 'spinner']"
+        [spin]="true"
+        style="font-size: 2em;">
+      </fa-icon>
+
+    </div>
+
+    <div class="row loaded-content" *ngIf="!flagLoadingData">
+      <div class="col p-t-20">
+
+        <h2 class="txt-lg">
+          Eventos Cadastrados
+        </h2>
+        <table class="table shadow-sm table-sm table-bordered table-hover list">
+          <thead class="thead-dark">
+          <tr>
+            <th scope="col">Nome</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr *ngFor="let event of events">
+            <th scope="row">
+              <a
+                href="javascript:;"
+                routerLink="/admin/eventos/{{ event.id }}"
+              >
+                <fa-icon [icon]="['fas', 'edit']" style="font-size: 0.8em;"></fa-icon>
+                {{ event.eventName }}
+              </a>
+
+            </th>
+          </tr>
+          </tbody>
+        </table>
+
+      </div>
+    </div>
+
+  </div>
+</div>

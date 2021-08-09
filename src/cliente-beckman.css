@@ -1,0 +1,81 @@
+
+
+.body-beckman {
+  
+  background-color: #cecece;
+
+  /*
+  background-image:url(/assets/clientes/beckman/beckman_14066_Backgroud-Evento-Kick-Off_v1.jpg);
+  */
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.body-beckman .panel-loading-msg {
+
+  color: #333;
+  line-height: 2.3em;
+  text-shadow: 1px 2px 2px rgba(255, 255, 255, 0.2)
+}
+
+
+/* navbar bg */
+.body-beckman .navbar {
+
+  color: #fff;
+  background: rgba(0, 0, 0, 0.888) !important;
+  min-height: 88px;
+}
+
+.body-beckman .event-logo {
+  display: none;
+}
+
+.body-beckman .toolbar {
+
+  box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.body-beckman .btn-logout {
+
+  float: right;
+  margin: 10px 0px 0px 0px;
+  color: #fff;
+  opacity: 0.8;
+  transition: 0.1s linear all;
+}
+
+.body-beckman .btn-logout:hover {
+
+  text-decoration: none;
+  opacity: 1;
+  transition: 0.1s linear all;
+}
+
+
+.body-beckman .left-panel .nav-item {
+  margin-right: 1em;
+}
+
+.body-beckman .left-panel .nav-item .btn {
+
+  color:#666;
+  border-bottom: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 0;
+}
+
+.body-beckman .left-panel .nav-item .btn:hover {
+
+  color:#222;
+  transition: 0.1s linear all;
+  border-bottom-color: #666;
+}
+
+.body-beckman .left-panel .nav-item .active,
+.body-beckman .left-panel .nav-item .active:hover {
+
+  color:#222;
+  transition: 0.1s linear all;
+  border-bottom-color: #222;
+}

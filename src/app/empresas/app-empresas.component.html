@@ -1,0 +1,37 @@
+<div
+  class="row no-gutters panel-loading-msg  page-loading-{{ flagPageLoading }}"
+>
+  <div class="col txt-center" i18n>
+
+    <!--i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i-->
+    <fa-icon [icon]="['fas', 'spinner']" [spin]="true" style="font-size: 2em;"></fa-icon>
+    <br>
+    Carregando, por favor aguarde...
+
+  </div>
+</div>
+
+
+<div class="container-fluid event-stage" style="padding: 0; height: 100%">
+
+  <div
+    class="row"
+    style="height: 97%"
+    *ngIf="!flagPageLoading"
+  >
+    <div class="col">
+
+      <app-emp-home *ngIf="subModule == 'home'"></app-emp-home>
+
+      <app-emp-auto-cadastro *ngIf="subModule == 'cadastro'"></app-emp-auto-cadastro>
+
+      <app-emp-catho-cadastro *ngIf="subModule == 'cadastroCatho'"></app-emp-catho-cadastro>
+
+      <app-emp-login *ngIf="subModule == 'login'"></app-emp-login>
+
+      <app-emp-evento *ngIf="subModule == 'evento'" [event]="event"></app-emp-evento>
+
+    </div>
+  </div>
+
+</div>
