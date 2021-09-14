@@ -1,28 +1,13 @@
 # LodIO
 
-Ambiente de streaming
-
 PROD:
 https://prod.d25hulrrzxzn0x.amplifyapp.com
-
 
 DEV:
 https://dev.d25hulrrzxzn0x.amplifyapp.com
 
-
-Dev Console Login:
+DEV CONSOLE LOGIN:
 https://918638571272.signin.aws.amazon.com/console
-
-
-Comando PowerShell:
-``Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass
-Opção A (All - Todos)
-
-## Para começar:
-
-``npm install
-``amplify env checkout dev
-``ng serve
 
 ## On new environments:
 
